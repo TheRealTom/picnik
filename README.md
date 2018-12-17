@@ -42,6 +42,12 @@ Working students SŠ: T.S., L.N.
     <li>Be Awesome and Creative</li>
 </ol>
 
+<h2>In Progress:<h2>
+<ul>
+  <li>Server configuration</li>    
+  <li>mainPage</li>
+</ul>
+
 <h2>Done:<h2>
 <ul>
 </ul>
