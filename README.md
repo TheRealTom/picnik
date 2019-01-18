@@ -1,5 +1,6 @@
 # picnik
-Working students SŠ: T.S., L.N.
+Use Case diagram: https://creately.com/diagram/jr1s6bz23/3727oflBfsBH324jxG26ksKHU%3D
+<br>Working students SŠ: T.S., L.N.
 <br>Front-end: React.js
 <br>Back-end: Redux.js
 <br>Database: NoSQL MongoDB/IBM Cloud
