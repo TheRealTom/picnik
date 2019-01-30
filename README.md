@@ -1,15 +1,15 @@
 # picnik
 Use Case diagram: https://creately.com/diagram/jr1s6bz23/3727oflBfsBH324jxG26ksKHU%3D
+Database:/url/
 <br>Working students SŠ: T.S., L.N.
 <br>Front-end: React.js
-<br>Back-end: Redux.js
+<br>Back-end: Express js
 <br>Database: NoSQL MongoDB/IBM Cloud
 <br>CSS: Own/Bootstrap
 <br>Parsing via GraphQL
 <br><br>Workflow:
 <br>T.S.
 <ol>
-    <li>Configure GIThub for L.N.</li>
     <li>Programme VPS or don't</li>
     <li>Programme user management</li>
             <ul>
@@ -45,10 +45,15 @@ Use Case diagram: https://creately.com/diagram/jr1s6bz23/3727oflBfsBH324jxG26ksK
 
 <h2>In Progress:<h2>
 <ul>
-  <li>Server configuration</li>    
+  <li>Server configuration</li>
+  <li>User Database</li>
+  <li>Login</li>
+  <li>homePage</li>
   <li>mainPage</li>
+  <li>CSS</li>
 </ul>
 
 <h2>Done:<h2>
 <ul>
+    <li>Configure GIThub for L.N.</li>
 </ul>
