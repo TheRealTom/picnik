@@ -1,5 +1,6 @@
 # picnik
 <br>Use Case diagram: https://creately.com/diagram/jr1s6bz23/3727oflBfsBH324jxG26ksKHU%3D
+<br>MindMap: https://atlas.mindmup.com/2019/01/9db582c0249b11e9aa975b89a12fdd28/picnik_mindmap/index.html
 <br>Database:/url/
 <br>Working students SŠ: T.S., L.N.
 <br>Front-end: React.js
