@@ -1,10 +1,11 @@
 # picnik
-Use Case diagram: https://creately.com/diagram/jr1s6bz23/3727oflBfsBH324jxG26ksKHU%3D
-Database:/url/
+<br>Use Case diagram: https://creately.com/diagram/jr1s6bz23/3727oflBfsBH324jxG26ksKHU%3D
+<br>Database:/url/
 <br>Working students SŠ: T.S., L.N.
 <br>Front-end: React.js
 <br>Back-end: Express js
 <br>Database: NoSQL MongoDB/IBM Cloud
+<br>Hosting: Firebase: /url/
 <br>CSS: Own/Bootstrap
 <br>Parsing via GraphQL
 <br><br>Workflow:
@@ -45,7 +46,7 @@ Database:/url/
 
 <h2>In Progress:<h2>
 <ul>
-  <li>Server configuration</li>
+  <li>Firebase configuration</li>
   <li>User Database</li>
   <li>Login</li>
   <li>homePage</li>
