@@ -2,24 +2,21 @@
 <br>Use Case diagram: https://creately.com/diagram/jr1s6bz23/3727oflBfsBH324jxG26ksKHU%3D
 <br>MindMap: https://atlas.mindmup.com/2019/01/9db582c0249b11e9aa975b89a12fdd28/picnik_mindmap/index.html
 <br>Database:/url/
-<br>Working students SŠ: T.S., L.N.
+<br>Working students SÅ : T.S., L.N.
 <br>Front-end: React.js
-<br>Back-end: Express js
-<br>Database: NoSQL MongoDB/IBM Cloud
+<br>Back-end: Express js/Redux js
+<br>Database: NoSQL via Firebase
 <br>Hosting: Firebase: /url/
 <br>CSS: Own/Bootstrap
-<br>Parsing via GraphQL
 <br><br>Workflow:
 <br>T.S.
-<ol>
-    <li>Programme VPS or don't</li>
+<ol
     <li>Programme user management</li>
             <ul>
             <li>Delete, update, review profile</li>    
             <li>Friendlist</li>
             <li>Special nav for admins with statistics(?)</li>
             </ul>
-    <li>Make mindmaps, diagrams, docs, comments</li>
     <li>Something more, but I dont know what at the moment</li>
 </ol>
 <br>L.N.
@@ -42,20 +39,30 @@
     <li>Ensure everybody does his work</li>
     <li>Programme database</li>
     <li>Programme mainPage which will be same for everybody</li>
-    <li>Be Awesome and Creative</li>
 </ol>
 
 <h2>In Progress:<h2>
+<h3>Tom</h3>
 <ul>
+  <li>Make mindmaps, diagrams, docs, comments</li>
   <li>Firebase configuration</li>
   <li>User Database</li>
-  <li>Login</li>
   <li>homePage</li>
   <li>mainPage</li>
   <li>CSS</li>
+  <li>Be Awesome and Creative</li>  
 </ul>
-
+<br>    
+<h3>L.N.</h3>
+<ul>
+  <li>User Database</li>
+  <li>homePage</li>
+  <li>mainPage</li>
+  <li>CSS</li>
+  <li>Be Awesome and Creative</li>  
+</ul>
 <h2>Done:<h2>
 <ul>
     <li>Configure GIThub for L.N.</li>
+    <li>Login</li>
 </ul>
