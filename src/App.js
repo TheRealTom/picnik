@@ -35,7 +35,7 @@ class App extends Component {
     return (
       <div className="App">
         <div className="App-navigator">
-         <Navbar collapseOnSelect expand="md" bg="dark" variant="dark">
+         <Navbar collapseOnSelect expand="lg" bg="light">
           <Navbar.Brand href="#home">Picnik</Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
@@ -53,7 +53,8 @@ class App extends Component {
         </div>
         <header className="App-header">
           <p>
-            <picniK>Let's go Picnik</picniK>!
+            <img src={require('./logo.png')} width="50" height="50" />
+            Picnik!
           </p>
         </header>
         <div className="App-logForm">

@@ -1,9 +1,10 @@
 @import url(https://fonts.googleapis.com/css?family=Ubuntu);
 
 
+
 .App {
   font-family: "Ubuntu";
-  background: #686b70;
+  background: white;
   text-align: center;
 }
 
@@ -17,16 +18,16 @@
   align-items: center;
   justify-content: center;
   font-size: calc(26px + 2vmin);
-  color: white;
+  color: black;
 }
 
 .App-navigator {
-  background-color: #282c34;
+  background-color: white;
   padding-left: calc(30px + 2vmin);
-  color: white;
-  display: flex;
-  align-items: center;
-  justify-content: flex-started;
+  padding-right: calc(30px + 2vmin);
+  color: black;
+  align-items: left;
+  text-align: justify;
 }
 
 .App-logForm {
@@ -37,14 +38,22 @@
   text-align: justify;
 }
 
+.buttons{
+  display: flex;
+  padding-left: calc(30px + 2vmin);
+}
+
 .App-footer {
-  background-color: #000000;
+  background-color: whitesmoke;
   display: flex;
   align-items: flex-end;
   justify-content: center;
   font-size: calc(1px + 2vmin);
-  color: white;
+  color: black;
 }
+
+
+
 
 @keyframes App-logo-spin {
   from {

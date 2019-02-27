@@ -39,16 +39,18 @@ class SignIn extends Component {
     return (
        <div className="col-md-6 App">
          <form>
-          <div class="form-group">
-             <input value={this.state.email} onChange={this.handleChange} type="email" name="email" class="form-control" id="email1" aria-describedby="emailHelp" placeholder="Enter email" />
+            <div class="form-group">
+              <input value={this.state.email} onChange={this.handleChange} type="email" name="email" class="form-control" id="email1" aria-describedby="emailHelp" placeholder="Enter email" />
+            </div>
+              <div class="form-group">
+              <input value={this.state.password} onChange={this.handleChange} type="password" name="password" class="form-control" id="exampleInputPassword1" placeholder="Password" />
+            </div>
+          <div className ="buttons">
+            <button type="submit" onClick={this.login} class="btn btn-primary">Login</button>
+            <button onClick={this.signup} style={{marginLeft: '25px'}} className="btn btn-success">SignUp</button>
           </div>
-             <div class="form-group">
-             <input value={this.state.password} onChange={this.handleChange} type="password" name="password" class="form-control" id="exampleInputPassword1" placeholder="Password" />
-          </div>
-          <button type="submit" onClick={this.login} class="btn btn-primary">Login</button>
-          <button onClick={this.signup} style={{marginLeft: '25px'}} className="btn btn-success">SignUp</button>
          </form>
-         <br/><a href="">Forgot your password?</a>
+          <br/><a href="">Forgot your password?</a>
        </div>
     );
   }
