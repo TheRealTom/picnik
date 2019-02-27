@@ -22,7 +22,7 @@
 
 .App-navigator {
   background-color: #282c34;
-  padding-left: calc(10px + 2vmin);
+  padding-left: calc(30px + 2vmin);
   color: white;
   display: flex;
   align-items: center;
