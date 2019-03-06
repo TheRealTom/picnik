@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
 import './App.css';
 import fire from './config/Firebase';
 // import SignUp from './SignUp';
@@ -50,7 +49,6 @@ class SignIn extends Component {
             <button onClick={this.signup} style={{marginLeft: '25px'}} className="btn btn-success">SignUp</button>
           </div>
          </form>
-          <br/><a href="">Forgot your password?</a>
        </div>
     );
   }

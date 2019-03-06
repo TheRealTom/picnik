@@ -2,8 +2,10 @@ import React, { Component } from 'react';
 import './App.css';
 import fire from './config/Firebase';
 import Logged from './Logged';
-import SignIn from './SignIn';
-import { Navbar, Nav, NavDropdown } from 'react-bootstrap';
+import SignIn from './components/userAuth/SignIn';
+import Login from './components/userAuth/Login';
+import NavBar from './components/layout/NavBar';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
 class App extends Component {
   constructor() {
@@ -33,34 +35,16 @@ class App extends Component {
 
   render() {
     return (
+      <BrowserRouter>
       <div className="App">
         <div className="App-navigator">
-         <Navbar collapseOnSelect expand="lg" bg="light">
-          <Navbar.Brand href="#home">Picnik</Navbar.Brand>
-          <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-          <Navbar.Collapse id="responsive-navbar-nav">
-            <Nav className="mr-auto">
-              <Nav.Link href="#about">About Us</Nav.Link>
-              <Nav.Link href="#terms">Terms</Nav.Link>
-            </Nav>
-            <Nav>
-              <Nav.Link eventKey={2} href="#memes">
-                Dank memes
-              </Nav.Link>
-            </Nav>
-          </Navbar.Collapse>
-         </Navbar>
+          <NavBar />
         </div>
-        <header className="App-header">
-          <p>
-            <img src={require('./logo.png')} width="50" height="50" />
-            Picnik!
-          </p>
-        </header>
         <div className="App-logForm">
-          <p>
-            <div> {this.state.user ? (<Logged/>) : (<SignIn/>)} </div>
-          </p>
+          <Switch>
+            <Route exact path="/" component={Login} />
+            <Route path="/signin" component={SignIn} />
+          </Switch>
         </div>
         <footer className="App-footer">
           <p>
@@ -68,6 +52,7 @@ class App extends Component {
           </p>
         </footer>
       </div>
+      </BrowserRouter>
     );
   }
 }
