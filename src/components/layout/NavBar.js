@@ -15,7 +15,7 @@ const NavBar = () =>{
        <Nav className="mr-auto">
          <Navbar><Link to="/about">About Us</Link></Navbar>
          <Navbar><Link to="/terms">Terms</Link></Navbar>
-         <Navbar><Link to="/about">Feedback</Link></Navbar>
+         <Navbar><Link to="/feedback">Feedback</Link></Navbar>
        </Nav>
        <Nav>
          <LoginLinks />

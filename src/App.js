@@ -4,6 +4,9 @@ import fire from './config/Firebase';
 import Logged from './Logged';
 import SignIn from './components/userAuth/SignIn';
 import Login from './components/userAuth/Login';
+import AboutUs from './components/layout/AboutUs';
+import Terms from './components/layout/Terms';
+import Feedback from './components/layout/Feedback';
 import NavBar from './components/layout/NavBar';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
@@ -44,6 +47,9 @@ class App extends Component {
           <Switch>
             <Route exact path="/" component={Login} />
             <Route path="/signin" component={SignIn} />
+            <Route path="/about" component={AboutUs} />
+            <Route path="/terms" component={Terms} />
+            <Route path="/feedback" component={Feedback} />
           </Switch>
         </div>
         <footer className="App-footer">
