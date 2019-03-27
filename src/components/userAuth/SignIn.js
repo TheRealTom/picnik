@@ -1,30 +1,46 @@
 import React, { Component } from 'react';
 import Header from '../layout/Header';
-
+//klasika register-TheRealTom
 class SignIn extends Component{
-  state = {
-
+  constructor(props) {
+    super(props);
+    this.state = {
+      email: '',
+      password: '',
+      name: '',
+      surname: ''
+    };
   }
+
+  handleChange = (e) => {
+     this.setState({
+       [e.target.id]: e.target.value
+     })
+   }
+   handleSubmit = (e) => {
+     e.preventDefault();
+     console.log(this.state);
+   }
+
   render(){
     return(
         <div>
           <Header />
-          <form>
-            <div class="form-group">
-               <input value={this.state.email} onChange={this.handleChange} type="email" name="email" class="form-control" id="email1" aria-describedby="emailHelp" placeholder="Enter email" />
+          <form onSubmit={this.handleSubmit}>
+            <div className="form-group">
+               <input onChange={this.handleChange} type="email" className="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email" />
             </div>
-            <div class="form-group">
-               <input value={this.state.password} onChange={this.handleChange} type="password" name="password" class="form-control" id="exampleInputPassword1" placeholder="Password" />
+            <div className="form-group">
+               <input onChange={this.handleChange} type="password" className="form-control" id="password" placeholder="Password" />
             </div>
-            <div class="form-group">
-               <input value={this.state.name} onChange={this.handleChange} type="text" name="userName" class="form-control" id="inputName" placeholder="Name" />
+            <div className="form-group">
+               <input onChange={this.handleChange} type="text"  className="form-control" id="name" placeholder="Name" />
             </div>
-            <div class="form-group">
-               <input value={this.state.surname} onChange={this.handleChange} type="text" name="userSurname" class="form-control" id="inputSurname" placeholder="Surname" />
+            <div className="form-group">
+               <input onChange={this.handleChange} type="text" className="form-control" id="surname" placeholder="Surname" />
             </div>
             <div className ="buttons">
-               <button type="submit" onClick={this.login} class="btn btn-primary">SignUp</button>
-               <button onClick={this.signup} style={{marginLeft: '25px'}} className="btn btn-success">SignUp</button>
+               <button type="submit" className="btn btn-primary">SignUp</button>
             </div>
           </form>
         </div>

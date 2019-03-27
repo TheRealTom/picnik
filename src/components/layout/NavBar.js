@@ -3,6 +3,7 @@ import { Navbar, Nav } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import LoginLinks from './LoginLinks.js';
 import LogoutLinks from './LogoutLinks.js';
+import { connect } from 'react-redux';
 
 const NavBar = () =>{
   return(
@@ -25,4 +26,12 @@ const NavBar = () =>{
     </Navbar>
   )
 }
-export default NavBar;
+
+const mapStateProps = (state) => {
+  console.log(state);
+  return{
+
+  }
+}
+
+export default connect(mapStateProps)(NavBar);
