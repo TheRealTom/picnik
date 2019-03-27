@@ -44,10 +44,10 @@ class Login extends Component{
   }
 }
 
-const mapDispatchProps = (dispatch) => {
+const mapDispatchToProps = (dispatch) => {
   return{
-    loggIn: (auth) => dispatch(loggIn(auth))
+    loggIn: (creds) => dispatch(loggIn(creds))
   }
 }
 
-export default connect(null, mapDispatchProps)(Login);
+export default connect(null, mapDispatchToProps)(Login);

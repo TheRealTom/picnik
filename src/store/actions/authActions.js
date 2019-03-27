@@ -6,9 +6,9 @@ export const loggIn = (autentization) => {
       autentization.email,
       autentization.password
     ).then(() => {
-      dispatch({ type: 'SUCCESSFUL_LOGIN'});
+      dispatch({ type: 'SUCCESSFUL_LOGIN' });
     }).catch((err) => {
-      dispatch({ type: 'FAILED_LOGIN', err});
+      dispatch({ type: 'FAILED_LOGIN', err });
     });
   }
 }
