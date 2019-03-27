@@ -4,10 +4,10 @@
 <br>Database:/url/
 <br>Working students SŠ: T.S., L.N.
 <br>Front-end: React.js
-<br>Back-end: Express js/Redux js
+<br>Back-end: Firebase/Redux js
 <br>Database: NoSQL via Firebase
-<br>Hosting: Firebase: /url/
-<br>CSS: Own/Bootstrap
+<br>Hosting: Firebase: https://picnic-mp123456789.firebaseapp.com/ (zatím tam nic není, abychom nevypotřebovali data a tak...)
+<br>CSS: Own/Bootstrap, React Spring
 <br><br>Workflow:
 <br>T.S.
 <ol
