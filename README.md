@@ -44,10 +44,9 @@
 <h2>In Progress:<h2>
 <h3>Tom</h3>
 <ul>
-  <li>Make mindmaps, diagrams, docs, comments</li>
+  <li>Make docs, comments</li>
   <li>Firebase configuration</li>
   <li>User Database</li>
-  <li>homePage</li>
   <li>mainPage</li>
   <li>CSS</li>
   <li>Be Awesome and Creative</li>  
@@ -56,13 +55,14 @@
 <h3>L.N.</h3>
 <ul>
   <li>User Database</li>
-  <li>homePage</li>
   <li>mainPage</li>
   <li>CSS</li>
   <li>Be Awesome and Creative</li>  
 </ul>
 <h2>Done:<h2>
 <ul>
+    <li>Make mindmaps, diagrams</li> 
+    <li>homePage</li>
     <li>Configure GIThub for L.N.</li>
     <li>Login</li>
 </ul>
