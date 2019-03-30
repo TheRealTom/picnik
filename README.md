@@ -6,14 +6,13 @@
 <br>Front-end: React.js
 <br>Back-end: Firebase/Redux js
 <br>Database: NoSQL via Firebase
-<br>Hosting: Firebase: https://picnic-mp123456789.firebaseapp.com/ (zatím tam nic není, abychom nevypotřebovali data a tak...)
+<br>Hosting: Firebase: https://picnic-mp123456789.firebaseapp.com/ (it is just blank at the moment...)
 <br>CSS: Own/Bootstrap, React Spring
 <br><br>Workflow:
 <br>T.S.
 <ol
     <li>Programme user management</li>
-            <ul>
-            <li>Delete, update, review profile</li>    
+            <ul> 
             <li>Friendlist</li>
             <li>Special nav for admins with statistics(?)</li>
             </ul>
@@ -44,6 +43,8 @@
 <h2>In Progress:<h2>
 <h3>Tom</h3>
 <ul>
+  <li>Registration</li>
+  <li>Delete, update, review profile</li>   
   <li>Make docs, comments</li>
   <li>Firebase configuration</li>
   <li>User Database</li>
