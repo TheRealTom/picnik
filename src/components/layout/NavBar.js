@@ -5,7 +5,9 @@ import LoginLinks from './LoginLinks.js';
 import LogoutLinks from './LogoutLinks.js';
 import { connect } from 'react-redux';
 
-const NavBar = () =>{
+const NavBar = (props) =>{
+  const { auth } = props
+  console.log(auth);
   return(
     <Navbar collapseOnSelect expand="lg" bg="light">
      <Navbar.Brand>
@@ -19,8 +21,7 @@ const NavBar = () =>{
          <Navbar><Link to="/feedback">Feedback</Link></Navbar>
        </Nav>
        <Nav>
-         <LoginLinks />
-         <LogoutLinks />
+         {auth.uid ? <LoginLinks /> :<LogoutLinks />}
        </Nav>
      </Navbar.Collapse>
     </Navbar>
@@ -28,9 +29,8 @@ const NavBar = () =>{
 }
 
 const mapStateProps = (state) => {
-  console.log(state);
   return{
-
+    auth: state.firebase.auth
   }
 }
 

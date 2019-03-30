@@ -42,6 +42,12 @@
   padding-left: calc(30px + 2vmin);
 }
 
+.errorText{
+  display: flex;
+  color: red;
+  padding-left: calc(30px + 2vmin);
+}
+
 .App-footer {
   background-color: whitesmoke;
   display: flex;
