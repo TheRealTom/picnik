@@ -25,6 +25,17 @@ class Login extends Component{
   }
 
   render(){
+    const { auth } = this.props;
+    if (auth.uid){
+      return(
+      <div>
+        <Header />
+        <div className='App'>
+          <p>Welcome stranger, with this specific email: {auth.uid}!</p>
+        </div>
+      </div>
+    )
+    }
     const { authError } = this.props;
     return(
         <div>
@@ -49,13 +60,13 @@ class Login extends Component{
 }
 const mapStateToProps = (state) => {
   return{
-    authError: state.auth.authError
+    authError: state.auth.authError,
+    auth: state.firebase.auth
   }
 }
 
 const mapDispatchToProps = (dispatch) => {
   return{
-
     loggIn: (creds) => dispatch(loggIn(creds))
   }
 }
