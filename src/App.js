@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import './App.css';
-import fire from './config/Firebase';
 import SignIn from './components/userAuth/SignIn';
 import Login from './components/userAuth/Login';
 import AboutUs from './components/layout/AboutUs';
 import Terms from './components/layout/Terms';
 import Feedback from './components/layout/Feedback';
 import NavBar from './components/layout/NavBar';
+import Profile from './components/layout/Profile';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
 class App extends Component {
@@ -14,24 +14,6 @@ class App extends Component {
     super();
     this.state = ({
       user: null,
-    });
-    this.authListener = this.authListener.bind(this);
-  }
-
-  componentDidMount() {
-    this.authListener();
-  }
-
-  authListener() {
-    fire.auth().onAuthStateChanged((user) => {
-      //console.log(user);
-      if (user){
-        this.setState({ user });
-        localStorage.setItem('user', user.uid);
-      } else {
-        this.setState({ user: null });
-        localStorage.removeItem('user');
-      }
     });
   }
 
@@ -49,6 +31,7 @@ class App extends Component {
             <Route path="/about" component={AboutUs} />
             <Route path="/terms" component={Terms} />
             <Route path="/feedback" component={Feedback} />
+            <Route path="/profile" component={Profile} />
           </Switch>
         </div>
         <footer className="App-footer">

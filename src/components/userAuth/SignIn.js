@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
 import Header from '../layout/Header';
+import { Redirect } from 'react-router-dom'
+import { connect } from 'react-redux';
+import { signIn } from '../../store/actions/authActions';
 //klasika register-TheRealTom
 class SignIn extends Component{
   constructor(props) {
@@ -8,7 +11,9 @@ class SignIn extends Component{
       email: '',
       password: '',
       name: '',
-      surname: ''
+      surname: '',
+      tel: '',
+      date: ''
     };
   }
 
@@ -19,10 +24,14 @@ class SignIn extends Component{
    }
    handleSubmit = (e) => {
      e.preventDefault();
-     console.log(this.state);
+     this.props.signIn(this.state);
    }
 
   render(){
+    const { auth, authError } = this.props;
+    if(auth.uid){
+      return (<Redirect to='/profile'>)
+    }
     return(
         <div>
           <Header />
@@ -34,17 +43,40 @@ class SignIn extends Component{
                <input onChange={this.handleChange} type="password" className="form-control" id="password" placeholder="Password" />
             </div>
             <div className="form-group">
-               <input onChange={this.handleChange} type="text"  className="form-control" id="name" placeholder="Name" />
+               <input onChange={this.handleChange} type="text" className="form-control" id="name" placeholder="Name" required/>
             </div>
             <div className="form-group">
-               <input onChange={this.handleChange} type="text" className="form-control" id="surname" placeholder="Surname" />
+               <input onChange={this.handleChange} type="text" className="form-control" id="surname" placeholder="Surname" required/>
+            </div>
+            <div className="form-group">
+               <input onChange={this.handleChange} type="tel" className="form-control" id="tel" placeholder="Mobile number" pattern="^[0-9\s]$" title="Example: 938393898" required/>
+            </div>
+            <div className="form-group">
+               <input onChange={this.handleChange} type="date" className="form-control" id="date" placeholder="Date of birth" required />
             </div>
             <div className ="buttons">
                <button type="submit" className="btn btn-primary">SignUp</button>
+               <div className = "errorText">
+                 { authError ? <p>{authError}</p> : null}
+               </div>
             </div>
           </form>
         </div>
     )
   }
 }
-export default SignIn;
+
+const mapStateProps = (state) => {
+  return {
+    authError: state.auth.authError,
+    auth: state.firebase.auth
+  }
+};
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+    signIn: (userParams) => dispatch(signIn(userParams))
+  }
+};
+
+export default connect(mapStateProps, mapDispatchToProps)(SignIn);
