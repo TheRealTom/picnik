@@ -31,7 +31,7 @@ class App extends Component {
             <Route path="/about" component={AboutUs} />
             <Route path="/terms" component={Terms} />
             <Route path="/feedback" component={Feedback} />
-            <Route path="/profile" component={Profile} />
+            <Route path="/profile/info" component={Profile} />
           </Switch>
         </div>
         <footer className="App-footer">

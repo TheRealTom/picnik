@@ -29,7 +29,7 @@ class SignIn extends Component{
 
   render(){
     const { auth, authError } = this.props;
-    if(auth.uid) return (<Redirect to='/profile' />);
+    if(auth.uid) return (<Redirect to='/profile/info' />);
     return(
         <div>
           <Header />

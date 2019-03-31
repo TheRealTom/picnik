@@ -9,7 +9,7 @@ const LoginLinks = (props) =>{
   return(
     <Nav className="mr-auto">
       <Navbar><Link to='/' onClick={props.signOut}>Log Out</Link></Navbar>
-      <Navbar><Link to="/profile">Profile</Link></Navbar>
+      <Navbar><Link to="/profile/info">Profile</Link></Navbar>
     </Nav>
   )
 }

@@ -26,12 +26,13 @@ class Login extends Component{
 
   render(){
     const { auth } = this.props;
+    console.log(auth.uid);
     if (auth.uid){
       return(
       <div>
         <Header />
         <div className='App'>
-          <p>Welcome stranger, with this specific email: {auth.uid}!</p>
+          <p>Welcome, {auth.uid}!</p>
         </div>
       </div>
     )
