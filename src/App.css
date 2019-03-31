@@ -23,6 +23,15 @@
   color: black;
 }
 
+.App-profile {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(26px + 2vmin);
+  color: black;
+}
+
 .App-navigator {
   background-color: white;
   color: black;
