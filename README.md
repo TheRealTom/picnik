@@ -12,7 +12,7 @@
 <br>T.S.
 <ol
     <li>Programme user management</li>
-            <ul> 
+            <ul>
             <li>Friendlist</li>
             <li>Special nav for admins with statistics(?)</li>
             </ul>
@@ -43,7 +43,6 @@
 <h2>In Progress:<h2>
 <h3>Tom</h3>
 <ul>
-  <li>Registration</li>
   <li>Delete, update, review profile</li>   
   <li>Make docs, comments</li>
   <li>Firebase configuration</li>
@@ -62,7 +61,8 @@
 </ul>
 <h2>Done:<h2>
 <ul>
-    <li>Make mindmaps, diagrams</li> 
+    <li>Registration</li>
+    <li>Make mindmaps, diagrams</li>
     <li>homePage</li>
     <li>Configure GIThub for L.N.</li>
     <li>Login</li>
