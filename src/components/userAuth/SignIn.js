@@ -29,9 +29,7 @@ class SignIn extends Component{
 
   render(){
     const { auth, authError } = this.props;
-    if(auth.uid){
-      return (<Redirect to='/profile'>)
-    }
+    if(auth.uid) return (<Redirect to='/profile' />);
     return(
         <div>
           <Header />
@@ -66,16 +64,16 @@ class SignIn extends Component{
   }
 }
 
+const mapDispatchToProps = (dispatch) => {
+  return {
+    signIn: (userParams) => dispatch(signIn(userParams))
+  }
+};
+
 const mapStateProps = (state) => {
   return {
     authError: state.auth.authError,
     auth: state.firebase.auth
-  }
-};
-
-const mapDispatchToProps = (dispatch) => {
-  return {
-    signIn: (userParams) => dispatch(signIn(userParams))
   }
 };
 

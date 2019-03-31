@@ -1,8 +1,12 @@
 import React from 'react';
 import Header from './Header';
-import '../../App.css'
+import { Redirect } from 'react-router-dom';
+import { connect } from 'react-redux';
+import '../../App.css';
 
-const Profile = () => {
+const Profile = (props) => {
+  const { auth } = props;
+  if(!auth.uid) return (<Redirect to='/signIn' />);
   return(
     <div className="App">
         <Header />
@@ -12,4 +16,11 @@ const Profile = () => {
      </div>
   )
 }
-export default Profile;
+
+const mapStateProps = (state) => {
+  return{
+    auth: state.firebase.auth
+  }
+}
+
+export default connect(mapStateProps)(Profile);
