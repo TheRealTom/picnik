@@ -1,7 +1,7 @@
 import React from 'react';
 import Header from './Header';
 import '../../App.css'
-
+//normální stránka
 const Feedback = () =>{
   return(
       <div className="App-soon">

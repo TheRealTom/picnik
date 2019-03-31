@@ -4,7 +4,9 @@ import { Link } from 'react-router-dom';
 import LoginLinks from './LoginLinks.js';
 import LogoutLinks from './LogoutLinks.js';
 import { connect } from 'react-redux';
-
+//navigace úplnì nahoøe
+//Podmínka pro ukázání navigace pøihlášeného/nepøihlášeného uivatele
+//Linky, které zmìní URL
 const NavBar = (props) =>{
   const { auth } = props
   console.log(auth);
@@ -27,7 +29,7 @@ const NavBar = (props) =>{
     </Navbar>
   )
 }
-
+//vytáhnutí objektu auth z authReduceru
 const mapStateProps = (state) => {
   return{
     auth: state.firebase.auth

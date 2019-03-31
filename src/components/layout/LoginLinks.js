@@ -4,16 +4,16 @@ import { Link } from 'react-router-dom';
 import { signOut } from '../../store/actions/authActions.js'
 import { connect } from 'react-redux';
 
-
+//když jsme pøihlášení, uvidíme tuhle navigaci
 const LoginLinks = (props) =>{
   return(
     <Nav className="mr-auto">
       <Navbar><Link to='/' onClick={props.signOut}>Log Out</Link></Navbar>
-      <Navbar><Link to="/profile/info">Profile</Link></Navbar>
+      <Navbar><Link to="/profile">Profile</Link></Navbar>
     </Nav>
   )
 }
-
+//odhlášení
 const mapDispatchToProps = (dispatch) => {
   return {
     signOut: () => dispatch(signOut())

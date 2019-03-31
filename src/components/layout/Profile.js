@@ -1,8 +1,9 @@
 import React from 'react';
-import Header from './Header';
 import { Redirect, BrowserRouter, Switch, Route } from 'react-router-dom';
 import { connect } from 'react-redux';
 import '../../App.css';
+
+//layouty pro Profil
 import ProfileBaskets from './profileLayout/ProfileBaskets.js';
 import ProfileInfo from './profileLayout/ProfileInfo.js';
 import ProfileFriendlist from './profileLayout/ProfileFriendlist.js';
@@ -12,7 +13,9 @@ import ProfileNavBar from './profileLayout/ProfileNavBar.js';
 
 const Profile = (props) => {
   const { auth } = props;
+  //redirect, kdy bychom nebyli pøihlášení a snaili se dostat na tuhle adresu
   if(!auth.uid) return (<Redirect to='/signIn' />);
+  //tady se øeší veškerı routing ohlednì usera
   return(
     <BrowserRouter>
     <div className="App">
@@ -25,11 +28,12 @@ const Profile = (props) => {
           <Route path="/profile/friendlist" component={ProfileFriendlist} />
           <Route path="/profile/baskets" component={ProfileBaskets} />
         </Switch>
-     </div>
-     </BrowserRouter>
+      </div>
+      </BrowserRouter>
   )
 }
 
+//získání objektu auth
 const mapStateProps = (state) => {
   return{
     auth: state.firebase.auth

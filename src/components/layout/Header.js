@@ -1,4 +1,5 @@
 import React from 'react';
+//hlavièka s fotkou
 
 const Header = () =>{
   return(
