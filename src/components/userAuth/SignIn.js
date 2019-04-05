@@ -16,12 +16,13 @@ class SignIn extends Component{
       date: ''
     };
   }
-
+//zapsání zmìny
   handleChange = (e) => {
      this.setState({
        [e.target.id]: e.target.value
      })
    }
+//pøi submitu
    handleSubmit = (e) => {
      e.preventDefault();
      this.props.signIn(this.state);
@@ -29,7 +30,9 @@ class SignIn extends Component{
 
   render(){
     const { auth, authError } = this.props;
+    //redirect v pøípadì nepøihlášeného uživatele
     if(auth.uid) return (<Redirect to='/profile/info' />);
+    //form s errorem
     return(
         <div>
           <Header />
@@ -63,13 +66,13 @@ class SignIn extends Component{
     )
   }
 }
-
+//pøetáhnutí props
 const mapDispatchToProps = (dispatch) => {
   return {
     signIn: (userParams) => dispatch(signIn(userParams))
   }
 };
-
+//pøetáhnutí stavu auth a authError z reduceru
 const mapStateProps = (state) => {
   return {
     authError: state.auth.authError,

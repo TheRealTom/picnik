@@ -77,6 +77,10 @@
   text-align: center;
 }
 
+.App-reminder{
+  padding-top: 20px;
+  padding-bottom: 10px;
+}
 
 @keyframes App-logo-spin {
   from {

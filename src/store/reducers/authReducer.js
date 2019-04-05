@@ -1,7 +1,7 @@
 const initState = {
   authError: null
 }
-
+//reducery na vrácení stavu, slouží hlavnì jako takový error messaging
 const authReducer = (state = initState, action) => {
   switch(action.type){
     case 'FAILED_LOGIN':
@@ -31,6 +31,18 @@ const authReducer = (state = initState, action) => {
       return {
         ...state,
         authError: action.err.message
+      };
+    case 'SUCCESSFUL_SENDEMAIL':
+      console.log('Sended password');
+      return {
+        ...state,
+        authError: null
+      };
+    case 'FAILED_SENDEMAIL':
+      console.log('Sending password failed');
+      return {
+        ...state,
+        authError: "This email does not exist. Is it really your email address?"
       };
     default:
       return state;

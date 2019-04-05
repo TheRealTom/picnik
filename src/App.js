@@ -5,7 +5,7 @@ import Login from './components/userAuth/Login';
 import AboutUs from './components/layout/AboutUs';
 import Terms from './components/layout/Terms';
 import Feedback from './components/layout/Feedback';
-import ForgetPassword from './components/layout/ForgetPassword';
+import ForgotPassword from './components/layout/ForgotPassword';
 import NavBar from './components/layout/NavBar';
 import Profile from './components/layout/Profile';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
@@ -33,7 +33,7 @@ class App extends Component {
             <Route path="/terms" component={Terms} />
             <Route path="/feedback" component={Feedback} />
             <Route path="/profile" component={Profile} />
-            <Route path="/forgotPassword" component={ForgetPassword} />
+            <Route path="/forgotPassword" component={ForgotPassword} />
           </Switch>
         </div>
         <footer className="App-footer">

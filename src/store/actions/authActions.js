@@ -1,3 +1,4 @@
+//pøihlašování
 export const loggIn = (authentization) => {
   return (dispatch, getState, {getFirebase}) => {
     const fire = getFirebase();
@@ -12,7 +13,7 @@ export const loggIn = (authentization) => {
     });
   }
 }
-
+//odhlašování
 export const signOut = () => {
   return(dispatch, getState, {getFirebase}) => {
     const fire = getFirebase();
@@ -22,7 +23,7 @@ export const signOut = () => {
   });
   }
 }
-
+//registrace
 export const signIn = (userParameters) => {
   return(dispatch, getState, {getFirebase, getFirestore}) => {
     const firebase = getFirebase();
@@ -42,6 +43,20 @@ export const signIn = (userParameters) => {
       dispatch({ type: 'SUCCESSFUL_SIGNIN' });
   }).catch((err) => {
     dispatch({ type: 'FAILED_SIGNIN', err });
+    });
+  }
+}
+//reset hesla pomocí mailu
+export const forgotPass = (userEmail) => {
+  return(dispatch, getState, { getFirebase }) => {
+    const firebase = getFirebase();
+
+    firebase.auth().sendPasswordResetEmail(
+      userEmail.forgotPass
+    ).then(() => {
+      dispatch({ type: 'SUCCESSFUL_SENDEMAIL'});
+    }).catch((err) => {
+      dispatch({ type: 'FAILED_SENDEMAIL' });
     });
   }
 }
