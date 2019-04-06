@@ -60,3 +60,22 @@ export const forgotPass = (userEmail) => {
     });
   }
 }
+//zmìna hesla
+export const renewPassword = (newPass) => {
+  return(dispatch, getState, { getFirebase }) => {
+    const firebase = getFirebase();
+
+    firebase.reauthenticate(newPass.oldPass).then(() => {
+      var user = firebase.auth().currentUser;
+      user.updatePassword({
+        password: newPass.newPass
+      }).then(() => {
+        dispatch({ type: 'SUCCESSFUL_UPDATE_PASSWORD'})
+      }).catch((err) => {
+        dispatch({ type: 'FAILED_UPDATE_PASSWORD' })
+      }).catch((err) => {
+        dispatch({ type: 'FAILED_LOAD_PROFILE' })
+      });
+    });
+  }
+}

@@ -44,6 +44,24 @@ const authReducer = (state = initState, action) => {
         ...state,
         authError: "This email does not exist. Is it really your email address?"
       };
+    case 'SUCCESSFUL_UPDATE_PASSWORD':
+      console.log('Updating password successeded');
+      return {
+        ...state,
+        authError: null
+      };
+    case 'FAILED_UPDATE_PASSWORD':
+      console.log('Updating password failed');
+      return {
+        ...state,
+        authError: action.err.message
+      };
+    case 'FAILED_LOAD_PROFILE':
+      console.log('Updating password failed');
+      return {
+        ...state,
+        authError: action.err.message
+      };
     default:
       return state;
   }

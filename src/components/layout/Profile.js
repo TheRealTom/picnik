@@ -35,6 +35,7 @@ const Profile = (props) => {
 
 //získání objektu auth
 const mapStateProps = (state) => {
+  console.log(state);   
   return{
     auth: state.firebase.auth
   }
