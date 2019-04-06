@@ -20,15 +20,10 @@
 </ol>
 <br>L.N.
 <ol>
-    <li>Programme UI - Baskets</li>
-            <ul>
-            <li>Delete, create, color baskets</li>    
-            <li>Add/ban users</li>
-            </ul>
     <li>Programme UI - Items</li>
             <ul>
-            <li>Delete, create, move, update, color, priority, comment, calendar(?) items</li>    
-            <li>Add/ban users</li>
+              <li>Delete, create, move, update, color, priority, comment, calendar(?) items</li>    
+              <li>Add/ban users</li>
             </ul>
     <li>Something more, but I dont know what at the moment</li>
 </ol>
@@ -47,20 +42,25 @@
   <li>Make docs, comments</li>
   <li>Firebase configuration</li>
   <li>User Database</li>
-  <li>mainPage</li>
   <li>CSS</li>
   <li>Be Awesome and Creative</li>  
 </ul>
 <br>    
 <h3>L.N.</h3>
 <ul>
-  <li>User Database</li>
+  <li>Programme UI - Baskets</li>
+            <ul>
+                <li>Delete, open, create, view, color baskets</li>    
+                <li>Add/ban users</li>
+            </ul>
+  <li>Baskets Database</li>
   <li>mainPage</li>
-  <li>CSS</li>
+  <li>CSS/Bootstrap/Animations</li>
   <li>Be Awesome and Creative</li>  
 </ul>
 <h2>Done:<h2>
 <ul>
+    <li>Reset password</li>
     <li>Registration</li>
     <li>Make mindmaps, diagrams</li>
     <li>homePage</li>
