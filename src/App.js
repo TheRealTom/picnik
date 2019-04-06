@@ -9,6 +9,9 @@ import ForgetPassword from './components/layout/ForgetPassword';
 import NavBar from './components/layout/NavBar';
 import Profile from './components/layout/Profile';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import BasketTable from './components/basketTable/BasketTable';
+import BasketDetails from './components/baskets/BasketDetails.js';
+import CreateBasket from './components/baskets/CreateBasket';
 
 class App extends Component {
   constructor() {
@@ -34,6 +37,9 @@ class App extends Component {
             <Route path="/feedback" component={Feedback} />
             <Route path="/profile" component={Profile} />
             <Route path="/forgotPassword" component={ForgetPassword} />
+            <Route path="/baskets" component={BasketTable} />
+            <Route path="/basket/:id" component={BasketDetails} />
+            <Route path="/create" component={CreateBasket} />
           </Switch>
         </div>
         <footer className="App-footer">

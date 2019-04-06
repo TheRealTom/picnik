@@ -2,8 +2,9 @@ import React, { Component } from 'react';
 import Header from '../layout/Header';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
-//propojení s databází
+//propojenï¿½ s databï¿½zï¿½
 import { loggIn } from '../../store/actions/authActions';
+
 
 //klasika login parametry
 class Login extends Component{
@@ -14,7 +15,7 @@ class Login extends Component{
       password: ''
     };
   }
-//zachytávání zmìn
+//zachytï¿½vï¿½nï¿½ zmï¿½n
  handleChange = (e) => {
     this.setState({
       [e.target.id]: e.target.value
@@ -29,7 +30,7 @@ class Login extends Component{
   render(){
     const { auth } = this.props;
     console.log(auth.uid);
-//podmínka zda jsme pøihlášení nebo ne
+//podmï¿½nka zda jsme pï¿½ihlï¿½enï¿½ nebo ne
     if (auth.uid){
       return(
       <div>
@@ -66,14 +67,14 @@ class Login extends Component{
     )
   }
 }
-//vytáhneme z reduceru authError a auth pro ovìøení pøíhlášení
+//vytï¿½hneme z reduceru authError a auth pro ovï¿½ï¿½enï¿½ pï¿½ï¿½hlï¿½enï¿½
 const mapStateToProps = (state) => {
   return{
     authError: state.auth.authError,
     auth: state.firebase.auth
   }
 }
-//pøetáhnutí props do authAction
+//pï¿½etï¿½hnutï¿½ props do authAction
 const mapDispatchToProps = (dispatch) => {
   return{
     loggIn: (creds) => dispatch(loggIn(creds))

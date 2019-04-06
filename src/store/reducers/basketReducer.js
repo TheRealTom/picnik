@@ -1,7 +1,7 @@
 const initState = {
   basket: [
-    {id:'0',title:'Cake',description:'recepty na nejvíc top dortíky a koláèe pod sluncem'},
-    {id:'1',title:'Liborovi na dobrou noc',description:'Nìco co ho potììší a utiší jeho choutky'},
+    {id:'0',title:'Cake',description:'recepty na nejvï¿½c top dortï¿½ky a kolï¿½ï¿½e pod sluncem'},
+    {id:'1',title:'Liborovi na dobrou noc',description:'Nï¿½co co ho potï¿½ï¿½ï¿½ a utiï¿½ï¿½ jeho choutky'},
     {id:'2',title:'Skola',description:':) Commit or Push, In Fortnite I am always in a bush'},
   ]
 }
