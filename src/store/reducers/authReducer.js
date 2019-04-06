@@ -54,13 +54,7 @@ const authReducer = (state = initState, action) => {
       console.log('Updating password failed');
       return {
         ...state,
-        authError: action.err.message
-      };
-    case 'FAILED_LOAD_PROFILE':
-      console.log('Updating password failed');
-      return {
-        ...state,
-        authError: action.err.message
+        authError: 'Something went wrong'
       };
     default:
       return state;

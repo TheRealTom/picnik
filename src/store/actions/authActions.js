@@ -64,18 +64,15 @@ export const forgotPass = (userEmail) => {
 export const renewPassword = (newPass) => {
   return(dispatch, getState, { getFirebase }) => {
     const firebase = getFirebase();
-
-    firebase.reauthenticate(newPass.oldPass).then(() => {
-      var user = firebase.auth().currentUser;
-      user.updatePassword({
-        password: newPass.newPass
-      }).then(() => {
-        dispatch({ type: 'SUCCESSFUL_UPDATE_PASSWORD'})
-      }).catch((err) => {
-        dispatch({ type: 'FAILED_UPDATE_PASSWORD' })
-      }).catch((err) => {
-        dispatch({ type: 'FAILED_LOAD_PROFILE' })
-      });
+    var user = firebase.auth().currentUser;
+    user.updatePassword(
+      newPass.newPass
+    ).then(() => {
+      console.log("1hello")
+      dispatch({ type: 'SUCCESSFUL_UPDATE_PASSWORD'})
+    }).catch((err) => {
+      console.log("2hello")
+      dispatch({ type: 'FAILED_UPDATE_PASSWORD' })
     });
   }
 }

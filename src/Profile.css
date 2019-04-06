@@ -19,3 +19,8 @@
 .Profile-charakters {
   font-weight: bold;
 }
+.Profile-errorText{
+  display: flex;
+  color: red;
+  padding-left: calc(30px + 2vmin);
+}
