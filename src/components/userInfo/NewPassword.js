@@ -44,6 +44,7 @@ class NewPassword extends Component{
           Reset Password
         </div>
         <div>
+          <form onSubmit={this.handleSubmit}>
             <div className="form-group">
               <input type="password" onChange={this.handleChange} id="newPass" placeholder="New password" required/>
             </div>
