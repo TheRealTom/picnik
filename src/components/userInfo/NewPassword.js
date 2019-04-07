@@ -53,11 +53,11 @@ class NewPassword extends Component{
             </div>
             <div className="Profile-change">
               <button type="submit">Change(does not work yet)</button>
-              <div className="Profile-errorText">
-              { authError ? <p>authError</p> : null }
-              </div>
             </div>
           </form>
+          <div className="Profile-errorText">
+            {authError ? <p>Ahoj</p> : null}
+          </div>
         </div>
       <br />
       </div>

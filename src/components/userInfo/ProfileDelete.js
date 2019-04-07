@@ -1,33 +1,65 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import '../../Profile.css';
+
+import { deleteUser } from '../../store/actions/authActions';
 
 class ProfileDelete extends Component{
   constructor(props){
     super(props);
     this.state = {
-      password: '',
+      currentPassword: '',
       confirmPassword: '',
-      show: true
     }
   }
-
-  handleButton = (e) => {
+  handleChange = (e) => {
     this.setState({
-      //nastavení aby se objevil alert pro COnfirmForm
+      [e.target.id]: e.target.value
     })
+  }
+
+  handleSubmit = (e) => {
+    e.preventDefault();
+    if(this.state.currentPassword === this.state.confirmPassword) {
+      this.props.deleteUser(this.state);
+      return;
+    }
   }
 
   render(){
     return(
-      <div>
-        <button onClick={this.handleButton}>Delete Profile</button>
-        <div id='deleteForm' hidden={this.state.show}>
-          Hello World! I am right here!
+      <div className="Profile-resetPassword">
+        <div className="Profile-heading">
+          Delete account
         </div>
+          <div>
+            <form onSubmit={this.handleSubmit}>
+              <div className="form-group">
+                <input type="password" onChange={this.handleChange} id="currentPassword" placeholder="Your Password" required/>
+              </div>
+              <div className="form-group">
+                <input type="password" onChange={this.handleChange} id="confirmPassword" placeholder="Confirm Your Password" required/>
+              </div>
+              <div className="Profile-change">
+                <button type="submit" onClick={this.handleSubmit}>Delete Profile</button>
+              </div>
+            </form>
+          </div>
         <br />
-      </div>
+        </div>
     )
   }
 }
 
+const mapStateToProps = (state) => {
+  return {
+    authError: state.firebase.authError
+  }
+}
+const mapDispatchToProps = (dispatch) => {
+  return {
+    deleteUser: (something) => dispatch(deleteUser(something))
+  }
+}
 
-export default ProfileDelete;
+export default connect(mapStateToProps, mapDispatchToProps)(ProfileDelete);

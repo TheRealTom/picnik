@@ -60,7 +60,7 @@ export const forgotPass = (userEmail) => {
     });
   }
 }
-//zmìna hesla
+//zmìna hesla(nedokonèená, ale funkèní)
 export const renewPassword = (newPass) => {
   return(dispatch, getState, { getFirebase }) => {
     const firebase = getFirebase();
@@ -68,11 +68,21 @@ export const renewPassword = (newPass) => {
     user.updatePassword(
       newPass.newPass
     ).then(() => {
-      console.log("1hello")
       dispatch({ type: 'SUCCESSFUL_UPDATE_PASSWORD'})
     }).catch((err) => {
-      console.log("2hello")
       dispatch({ type: 'FAILED_UPDATE_PASSWORD' })
+    });
+  }
+}
+//smazání úètu
+export const deleteUser = (states) => {
+  return(dispatch, getState, { getFirebase }) => {
+    const firebase = getFirebase();
+    var user = firebase.auth().currentUser;
+    user.delete().then(function() {
+      dispatch({ type: 'SUCCESSFUL_DELETE'})
+    }).catch((err) => {
+      dispatch({ type: 'FAILED_DELETE_REQUEST' })
     });
   }
 }

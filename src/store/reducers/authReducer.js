@@ -56,6 +56,18 @@ const authReducer = (state = initState, action) => {
         ...state,
         authError: 'Something went wrong'
       };
+    case 'SUCCESSFUL_DELETE':
+      console.log('Deleting account successeded');
+      return {
+        ...state,
+        authError: null
+      };
+    case 'FAILED_DELETE_REQUEST':
+      console.log('Deleting acconut failed');
+      return {
+        ...state,
+        authError: 'Something went wrong'
+      };
     default:
       return state;
   }
