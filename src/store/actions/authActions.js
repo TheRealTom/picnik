@@ -86,3 +86,26 @@ export const deleteUser = (states) => {
     });
   }
 }
+
+export const updateUser = (newInformation) => {
+  return(dispatch, getState, { getFirebase, getFirestore }) => {
+    const firebase = getFirebase();
+    const firestore = getFirestore();
+    const user = firebase.auth().currentUser;
+    user.updateEmail(
+      newInformation.newEmail
+    ).then(() => {
+      console.log();
+      return firestore.collection('users').doc(user.uid).update({
+        name: newInformation.newName,
+        surname: newInformation.newSurname,
+        tel: newInformation.newTel,
+        date: newInformation.newDate
+      })
+    }).then(() => {
+      dispatch({ type: 'SUCCESSFUL_UPDATE_PROFILE'})
+    }).catch((err) => {
+      dispatch({ type: 'FAILED_UPDATE_PROFILE' })
+    });
+  }
+}

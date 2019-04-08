@@ -63,10 +63,22 @@ const authReducer = (state = initState, action) => {
         authError: null
       };
     case 'FAILED_DELETE_REQUEST':
-      console.log('Deleting acconut failed');
+      console.log('Deleting account failed');
       return {
         ...state,
-        authError: 'Something went wrong'
+        authError: 'Your account has not been deleted'
+      };
+    case 'SUCCESSFUL_UPDATE_PROFILE':
+      console.log('Your account has been updated');
+      return {
+        ...state,
+        authError: null
+      };
+    case 'FAILED_UPDATE_PROFILE':
+      console.log('Updating account failed');
+      return {
+        ...state,
+        authError: 'Update was not succesful'
       };
     default:
       return state;
