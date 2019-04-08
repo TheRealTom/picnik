@@ -8,6 +8,7 @@ import ProfileBaskets from './profileLayout/ProfileBaskets.js';
 import ProfileInfo from './profileLayout/ProfileInfo.js';
 import ProfileFriendlist from './profileLayout/ProfileFriendlist.js';
 import ProfileNavBar from './profileLayout/ProfileNavBar.js';
+import ProfileUpdate from './profileLayout/ProfileUpdate.js';
 
 
 
@@ -27,6 +28,7 @@ const Profile = (props) => {
           <Route exact path="/profile/info" component={ProfileInfo} />
           <Route path="/profile/friendlist" component={ProfileFriendlist} />
           <Route path="/profile/baskets" component={ProfileBaskets} />
+          <Route path="/profile/updateUser" component={ProfileUpdate} />
         </Switch>
       </div>
       </BrowserRouter>
@@ -35,7 +37,7 @@ const Profile = (props) => {
 
 //získání objektu auth
 const mapStateProps = (state) => {
-  console.log(state);   
+  console.log(state);
   return{
     auth: state.firebase.auth
   }

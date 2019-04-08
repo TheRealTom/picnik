@@ -1,10 +1,16 @@
-import React from 'react';
+import React, { Component } from 'react';
 import '../../Profile.css';
 import { connect } from 'react-redux';
 import { Table } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
-const UserInformation = (props) => {
-    const { profile, auth } = props;
+class UserInformation extends Component{
+  constructor(props){
+    super(props);
+  }
+
+  render(){
+    const { profile, auth } = this.props;
     return(
       <div className="Profile-info">
           <div className="Profile-heading">
@@ -63,12 +69,14 @@ const UserInformation = (props) => {
           </tr>
         </Table>
           <div className="Profile-change">
-              <button>Change (does not work yet)</button>
+              <Link className="btn btn-primary" to="/profile/updateUser">Change</Link>
           </div>
       <br />
       </div>
     )
   };
+}
+
 
 const mapStateProps = (state) => {
   return{

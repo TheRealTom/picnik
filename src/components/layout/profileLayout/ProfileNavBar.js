@@ -1,8 +1,10 @@
 import React from 'react';
 import { Nav } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import { connect } from 'react-redux';
 
-const ProfileNavBar = () =>{
+const ProfileNavBar = (props) =>{
+  const { profile } = props;
   return(
     <div>
       <Nav fill variant="tabs" defaultActiveKey="/home">
@@ -15,13 +17,18 @@ const ProfileNavBar = () =>{
         <Nav.Item>
           <Nav.Link eventKey="friendlist"><Link to='/profile/friendlist'>Friendlist</Link></Nav.Link>
         </Nav.Item>
-        <Nav.Item>
-          <Nav.Link eventKey="disabled" disabled><Link to='/adminStats' active='false'>AdminStats</Link></Nav.Link>
-        </Nav.Item>
+          {profile.role ? <Nav.Item>
+                    <Nav.Link eventKey="adminNots"><Link to='/adminStats'>Admin Log</Link></Nav.Link>
+                  </Nav.Item> : null}
       </Nav>
     </div>
   )
 }
 
+const mapStateToProps = (state) => {
+  return {
+    profile: state.firebase.profile
+  }
+}
 
-export default ProfileNavBar;
+export default connect(mapStateToProps)(ProfileNavBar);

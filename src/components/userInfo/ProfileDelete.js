@@ -35,13 +35,13 @@ class ProfileDelete extends Component{
           <div>
             <form onSubmit={this.handleSubmit}>
               <div className="form-group">
-                <input type="password" onChange={this.handleChange} id="currentPassword" placeholder="Your Password" required/>
+                <input type="password" onChange={this.handleChange} className="form-control" id="currentPassword" placeholder="Your Password" required/>
               </div>
               <div className="form-group">
-                <input type="password" onChange={this.handleChange} id="confirmPassword" placeholder="Confirm Your Password" required/>
+                <input type="password" onChange={this.handleChange} className="form-control" id="confirmPassword" placeholder="Confirm Your Password" required/>
               </div>
               <div className="Profile-change">
-                <button type="submit" onClick={this.handleSubmit}>Delete Profile</button>
+                <button type="submit" className="btn btn-primary" onClick={this.handleSubmit}>Delete Profile</button>
               </div>
             </form>
           </div>

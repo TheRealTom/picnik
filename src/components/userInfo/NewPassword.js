@@ -46,13 +46,13 @@ class NewPassword extends Component{
         <div>
           <form onSubmit={this.handleSubmit}>
             <div className="form-group">
-              <input type="password" onChange={this.handleChange} id="newPass" placeholder="New password" required/>
+              <input type="password" onChange={this.handleChange} className="form-control" id="newPass" placeholder="New password" required/>
             </div>
             <div className="form-group">
-              <input type="password" onChange={this.handleChange} id="confirmPass" placeholder="New password again" required/>
+              <input type="password" onChange={this.handleChange} className="form-control" id="confirmPass" placeholder="New password again" required/>
             </div>
             <div className="Profile-change">
-              <button type="submit">Change(does not work yet)</button>
+              <button type="submit" className="btn btn-primary">Change</button>
             </div>
           </form>
           <div className="Profile-errorText">
