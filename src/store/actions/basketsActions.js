@@ -1,5 +1,5 @@
 export const createBasket = (project) => {
-    return (dispatch, getState, {getFirebase, getFirestore }) => {
+    return (dispatch, getState, { getFirestore }) => {
         //vytvořit async volání databáze
         const firestore = getFirestore();
         const profile = getState().firebase.profile;
@@ -11,7 +11,7 @@ export const createBasket = (project) => {
             authorId: authorID,
             createdTime: new Date()    
         }).then(() => {
-            dispatch({type: 'CREATE_BASKET', project});
+            dispatch({ type: 'CREATE_BASKET' });
         }).catch((err) => {
             dispatch({ type: 'CREATE_BASKET_ERROR', err });
         })  

@@ -2,13 +2,13 @@ import React from 'react';
 import BasketSummary from './BasketSummary'
 import { Link } from 'react-router-dom'
 
-const BasketList = ({basket}) => {
+const BasketList = ({projects}) => {
   return(
     <div>
-      { basket  && basket.map(project => {
+      { projects  && projects.map(project => {
         return(
           <Link to={'/basket/' + project.id}>
-            <BasketSummary project={project} key={basket.id} />
+            <BasketSummary project={project} key={projects.id} />
           </Link>
         )
       })}
