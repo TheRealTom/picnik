@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { createBasket } from '../../store/actions/basketsActions';
 
 class CreateBasket extends Component{
     state = {
@@ -12,7 +14,8 @@ class CreateBasket extends Component{
     }
   handleSubmit = (e) => {
     e.preventDefault();
-    console.log(this.state);
+    // console.log(this.state);
+    this.props.createBasket(this.state);
   }
 
   render(){
@@ -35,4 +38,11 @@ class CreateBasket extends Component{
     )
   }
 }
-export default CreateBasket;
+
+const mapDispatchToProps = (dispatch) => {
+  return{
+    createBasket: (project) => dispatch(createBasket(project))
+  }
+}
+
+export default connect(null, mapDispatchToProps)(CreateBasket);

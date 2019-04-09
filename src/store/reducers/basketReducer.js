@@ -6,7 +6,11 @@ const initState = {
   ]
 }
 
-const basketReducer = (state = initState, action) =>{
+const basketReducer = (state = initState, action) => {
+  switch (action.type) {
+    case 'CREATE_BASKET':
+      console.log('created project', action.project)
+  }
   return state
 }
 
