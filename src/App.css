@@ -91,6 +91,10 @@
   margin-block-end: 5%;
 }
 
+.Container{
+  margin-block-start: 1%;
+}
+
 
 @keyframes App-logo-spin {
   from {

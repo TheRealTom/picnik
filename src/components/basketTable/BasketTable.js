@@ -1,20 +1,18 @@
 import React, { Component } from 'react';
 import {Row, Col, Container } from 'react-bootstrap';
 import BasketList from '../baskets/BasketList';
-import { connect } from 'react-redux'
+import { connect } from 'react-redux';
+import '../../App.css';
 
 class BasketTable extends Component {
   render(){
     //console.log(this.props);
    const { basket } = this.props;
-/*   let basketList = this.state.basket.map(basket => {
+   /*let basketList = () => {
     return(
-      <Col >
-        <BasketList basket={basket} />
-        <br />
-      </Col>
+      while (row = q->fetch()): 
     )
-   })
+   }
       
    return(
         <Col >
@@ -25,14 +23,9 @@ class BasketTable extends Component {
     } */
     
     return(
-      <Container >
-        <Row>
-          <Col>
-            <BasketList basket={basket} />
-          </Col>
-        </Row>
-      </Container>
-
+    <Container fluid>
+      <BasketList basket={basket} />
+    </Container>
      )
 
   }
