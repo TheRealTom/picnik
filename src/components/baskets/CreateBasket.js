@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { createBasket } from '../../store/actions/basketsActions';
+import { Redirect } from 'react-router-dom'
 
 class CreateBasket extends Component{
     state = {
@@ -15,10 +16,14 @@ class CreateBasket extends Component{
   handleSubmit = (e) => {
     e.preventDefault();
     // console.log(this.state);
-    this.props.createBasket(this.state);
+    this.props.createBasket(this.state)
+    this.props.history.push('/baskets');
   }
 
   render(){
+    const { auth } = this.props;
+      if (!auth.uid) return <Redirect to='/signin' />
+
     return(
         <div>
           <form onSubmit={this.handleSubmit}>
@@ -39,10 +44,16 @@ class CreateBasket extends Component{
   }
 }
 
+const mapStateToProps = (state) => {
+  return {
+    auth: state.firebase.auth
+  }
+}
+
 const mapDispatchToProps = (dispatch) => {
   return{
     createBasket: (project) => dispatch(createBasket(project))
   }
 }
 
-export default connect(null, mapDispatchToProps)(CreateBasket);
+export default connect(mapStateToProps, mapDispatchToProps)(CreateBasket);

@@ -8,7 +8,7 @@ import { connect } from 'react-redux';
 //Podm�nka pro uk�z�n� navigace p�ihl�en�ho/nep�ihl�en�ho u�ivatele
 //Linky, kter� zm�n� URL
 const NavBar = (props) =>{
-  const { auth } = props
+  const { auth } = props;
   console.log(auth);
   return(
     <Navbar collapseOnSelect expand="lg" bg="light">

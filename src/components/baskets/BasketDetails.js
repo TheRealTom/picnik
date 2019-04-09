@@ -3,9 +3,13 @@ import { Card } from 'react-bootstrap';
 import { connect } from 'react-redux';
 import { firestoreConnect } from 'react-redux-firebase';
 import { compose } from 'redux';
+import { Redirect } from 'react-router-dom'
+import moment from 'moment'
 
 const BasketDetails = (props) => {
-  const { basket } = props;
+  const { basket ,auth} = props;
+    if (!auth.uid) return <Redirect to='/signin' />
+
   if (basket){
     return(
       <div className="basket-details">
@@ -17,6 +21,7 @@ const BasketDetails = (props) => {
           </Card.Body>
           <Card.Footer>
             <small className="text-muted">Posted by {basket.authorFirstName} {basket.authorLastName}</small>
+            <small className="text-muted">{moment(basket.createdTime.toDate()).calendar()}</small>
           </Card.Footer>
         </Card>
       </div>
@@ -35,7 +40,8 @@ const mapStateToProps = (state, ownProps) => {
   const baskets = state.firestore.data.baskets;
   const basket = baskets ? baskets[id] : null
   return{
-    basket: basket
+    basket: basket,
+    auth: state.firebase.auth
   }
 } 
 

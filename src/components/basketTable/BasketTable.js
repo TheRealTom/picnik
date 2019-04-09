@@ -4,11 +4,13 @@ import BasketList from '../baskets/BasketList';
 import { connect } from 'react-redux';
 import { firestoreConnect } from 'react-redux-firebase'
 import { compose } from 'redux'
+import { Redirect } from 'react-router-dom'
 
 class BasketTable extends Component {
   render(){
     //console.log(this.props);
-   const { basket } = this.props;
+   const { basket, auth  } = this.props;
+   if (!auth.uid) return <Redirect to='/signin' />
 
    /* return(
         <Col >
@@ -30,7 +32,8 @@ class BasketTable extends Component {
 const mapStateToProps = (state) => {
   console.log(state);
   return{
-    basket: state.firestore.ordered.baskets
+    baskets: state.firestore.ordered.baskets,
+    auth: state.firebase.auth
   }
 }
 

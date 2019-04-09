@@ -30,7 +30,7 @@ class App extends Component {
         </div>
         <div className="App-logForm">
           <Switch>
-            <Route exact path="/" component={Login} />
+            <Route exact path="/" component={BasketTable} />
             <Route path="/signin" component={SignIn} />
             <Route path="/about" component={AboutUs} />
             <Route path="/terms" component={Terms} />
