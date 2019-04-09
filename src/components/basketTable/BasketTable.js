@@ -1,20 +1,16 @@
 import React, { Component } from 'react';
-import {Row, Col, Container } from 'react-bootstrap';
+import { Container } from 'react-bootstrap';
 import BasketList from '../baskets/BasketList';
 import { connect } from 'react-redux';
-import '../../App.css';
+import { firebaseConnect } from 'react-redux-firebase'
+import { compose } from 'redux'
 
 class BasketTable extends Component {
   render(){
     //console.log(this.props);
    const { basket } = this.props;
-   /*let basketList = () => {
-    return(
-      while (row = q->fetch()): 
-    )
-   }
-      
-   return(
+
+   /* return(
         <Col >
         <BasketList basket={basket} />
         <br />
@@ -32,9 +28,15 @@ class BasketTable extends Component {
 }
 
 const mapStateToProps = (state) => {
+  console.log(state);
   return{
-    basket: state.project.basket
+    basket: state.firestore.ordered.baskets
   }
 }
 
-export default connect(mapStateToProps)(BasketTable)
+export default compose(
+  connect(mapStateToProps),
+  firebaseConnect([
+    { collection: 'baskets' }
+  ])
+)(BasketTable)

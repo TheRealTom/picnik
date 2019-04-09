@@ -9,9 +9,14 @@ const initState = {
 const basketReducer = (state = initState, action) => {
   switch (action.type) {
     case 'CREATE_BASKET':
-      console.log('created project', action.project)
+      console.log('created project', action.project);
+      return state;
+    case 'CREATE_BASKET_ERROR':
+      console.log('create basket error', action.err);
+      return state;
+    default:
+      return state;
   }
-  return state
 }
 
 export default basketReducer

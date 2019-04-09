@@ -1,23 +1,47 @@
-import React from 'react'
+import React from 'react';
 import { Card } from 'react-bootstrap';
+import { connect } from 'react-redux';
+import { firestoreConnect } from 'react-redux-firebase';
+import { compose } from 'redux';
 
-const BasketDetails = () => {
-  return (
-    <div className="basket-details">
-      <Card border="secondary" style={{height: 'flex', marginTop: "2rem", 
-        marginLeft: "1rem", marginRight: "1rem", marginBottom: "1rem"}}>
-        <Card.Body>
-          <Card.Title style={{ color: 'black' }}>Title</Card.Title>
-          <Card.Text style={{ color: 'black'}}>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus enim erat, vestibulum vel, aliquam a, posuere eu, velit. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat. Praesent dapibus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos. Cras elementum. Integer tempor. Integer in sapien. Morbi imperdiet, mauris ac auctor dictum, nisl ligula egestas nulla, et sollicitudin sem purus in lacus. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Duis viverra diam non justo. Nullam dapibus fermentum ipsum. Duis ante orci, molestie vitae vehicula venenatis, tincidunt ac pede. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus enim erat, vestibulum vel, aliquam a, posuere eu, velit. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat. Praesent dapibus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos. Cras elementum. Integer tempor. Integer in sapien. Morbi imperdiet, mauris ac auctor dictum, nisl ligula egestas nulla, et sollicitudin sem purus in lacus. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Duis viverra diam non justo. Nullam dapibus fermentum ipsum. Duis ante orci, molestie vitae vehicula venenatis, tincidunt ac pede. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus enim erat, vestibulum vel, aliquam a, posuere eu, velit. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat. Praesent dapibus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos. Cras elementum. Integer tempor. Integer in sapien. Morbi imperdiet, mauris ac auctor dictum, nisl ligula egestas nulla, et sollicitudin sem purus in lacus. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Duis viverra diam non justo. Nullam dapibus fermentum ipsum. Duis ante orci, molestie vitae vehicula venenatis, tincidunt ac pede. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.
-            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus enim erat, vestibulum vel, aliquam a, posuere eu, velit. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat. Praesent dapibus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos. Cras elementum. Integer tempor. Integer in sapien. Morbi imperdiet, mauris ac auctor dictum, nisl ligula egestas nulla, et sollicitudin sem purus in lacus. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Duis viverra diam non justo. Nullam dapibus fermentum ipsum. Duis ante orci, molestie vitae vehicula venenatis, tincidunt ac pede. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus enim erat, vestibulum vel, aliquam a, posuere eu, velit. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat. Praesent dapibus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos. Cras elementum. Integer tempor. Integer in sapien. Morbi imperdiet, mauris ac auctor dictum, nisl ligula egestas nulla, et sollicitudin sem purus in lacus. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Duis viverra diam non justo. Nullam dapibus fermentum ipsum. Duis ante orci, molestie vitae vehicula venenatis, tincidunt ac pede. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus enim erat, vestibulum vel, aliquam a, posuere eu, velit. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat. Praesent dapibus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos. Cras elementum. Integer tempor. Integer in sapien. Morbi imperdiet, mauris ac auctor dictum, nisl ligula egestas nulla, et sollicitudin sem purus in lacus. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Duis viverra diam non justo. Nullam dapibus fermentum ipsum. Duis ante orci, molestie vitae vehicula venenatis, tincidunt ac pede. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.
-          </Card.Text>
-        </Card.Body>
-        <Card.Footer>
-          <small className="text-muted">Jmeno <br /> datum</small>
-        </Card.Footer>
-      </Card>
-    </div>
-  )
+const BasketDetails = (props) => {
+  const { basket } = props;
+  if (basket){
+    return(
+      <div className="basket-details">
+        <Card border="secondary" style={{height: 'flex', marginTop: "2rem", 
+          marginLeft: "1rem", marginRight: "1rem", marginBottom: "1rem"}}>
+          <Card.Body>
+            <Card.Title style={{ color: 'black' }}>{basket.title}</Card.Title>
+            <Card.Text style={{ color: 'black'}}>{basket.desription}</Card.Text>
+          </Card.Body>
+          <Card.Footer>
+            <small className="text-muted">Posted by {basket.authorFirstName} {basket.authorLastName}</small>
+          </Card.Footer>
+        </Card>
+      </div>
+    )
+  } else {
+    return (
+      <div className="container">
+        <p>Loading project...</p>
+      </div>
+    )
+  }
 }
 
-export default BasketDetails
+const mapStateToProps = (state, ownProps) => {
+  const id = ownProps.match.params.id;
+  const baskets = state.firestore.data.baskets;
+  const basket = baskets ? baskets[id] : null
+  return{
+    basket: basket
+  }
+} 
+
+export default compose(
+  connect(mapStateToProps),
+  firestoreConnect([
+    { collection: 'projects' }
+  ])
+)(BasketDetails)
