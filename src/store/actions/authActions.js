@@ -86,7 +86,7 @@ export const deleteUser = (states) => {
     });
   }
 }
-
+//Pøepsání usera novımi parametry
 export const updateUser = (newInformation) => {
   return(dispatch, getState, { getFirebase, getFirestore }) => {
     const firebase = getFirebase();

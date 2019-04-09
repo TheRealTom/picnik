@@ -27,15 +27,14 @@ class Login extends Component{
   }
 
   render(){
-    const { auth } = this.props;
-    console.log(auth.uid);
+    const { auth, profile } = this.props;
 //podmínka zda jsme pøihlášení nebo ne
     if (auth.uid){
       return(
       <div>
         <Header />
         <div className='App'>
-          <p>Welcome, {auth.uid}!</p>
+          <p>Welcome, {profile.name}!</p>
         </div>
       </div>
     )
@@ -70,7 +69,8 @@ class Login extends Component{
 const mapStateToProps = (state) => {
   return{
     authError: state.auth.authError,
-    auth: state.firebase.auth
+    auth: state.firebase.auth,
+    profile: state.firebase.profile
   }
 }
 //pøetáhnutí props do authAction
