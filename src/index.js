@@ -9,14 +9,14 @@ import { Provider } from 'react-redux';
 import thunk from 'redux-thunk';
 import { reduxFirestore, getFirestore } from 'redux-firestore';
 import { reactReduxFirebase, getFirebase } from 'react-redux-firebase';
-import configFB from './config/Firebase.js';
+import fbConfig from './config/fbConfig.js';
 
 
 const store = createStore(rootReducer,
   compose(
     applyMiddleware(thunk.withExtraArgument({ getFirebase, getFirestore })),
-    reduxFirestore(configFB),
-    reactReduxFirebase(configFB, {attachAuthIsReady: true })
+    reduxFirestore(fbConfig),
+    reactReduxFirebase(fbConfig, {attachAuthIsReady: true })
   )
 );
 

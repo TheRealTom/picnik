@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Container } from 'react-bootstrap';
 import BasketList from '../baskets/BasketList';
 import { connect } from 'react-redux';
-import { firebaseConnect } from 'react-redux-firebase'
+import { firestoreConnect } from 'react-redux-firebase'
 import { compose } from 'redux'
 
 class BasketTable extends Component {
@@ -36,7 +36,7 @@ const mapStateToProps = (state) => {
 
 export default compose(
   connect(mapStateToProps),
-  firebaseConnect([
+  firestoreConnect([
     { collection: 'baskets' }
   ])
 )(BasketTable)

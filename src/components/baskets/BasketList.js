@@ -7,7 +7,7 @@ const BasketList = ({basket}) => {
     <div>
       { basket  && basket.map(project => {
         return(
-          <Link to={'/project/' + project.id}>
+          <Link to={'/basket/' + project.id}>
             <BasketSummary project={project} key={basket.id} />
           </Link>
         )
