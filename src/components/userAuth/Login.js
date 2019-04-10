@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Header from '../layout/Header';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
+import BasketTable from '../basketTable/BasketTable';
 //propojen� s datab�z�
 import { loggIn } from '../../store/actions/authActions';
 
@@ -37,6 +38,7 @@ class Login extends Component{
         <Header />
         <div className='App'>
           <p>Welcome, {auth.uid}!</p>
+          <BasketTable />
         </div>
       </div>
     )
