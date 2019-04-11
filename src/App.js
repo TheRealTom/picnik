@@ -36,14 +36,10 @@ class App extends Component {
             <Route path="/terms" component={Terms} />
             <Route path="/feedback" component={Feedback} />
             <Route path="/profile" component={Profile} />
-<<<<<<< HEAD
             <Route path="/forgotPassword" component={ForgotPassword} />
-=======
-            <Route path="/forgotPassword" component={ForgetPassword} />
             <Route path="/baskets" component={BasketTable} />
             <Route path="/basket/:id" component={BasketDetails} />
             <Route path="/create" component={CreateBasket} />
->>>>>>> baskets
           </Switch>
         </div>
         <footer className="App-footer">
