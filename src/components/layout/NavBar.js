@@ -4,11 +4,11 @@ import { Link } from 'react-router-dom';
 import LoginLinks from './LoginLinks.js';
 import LogoutLinks from './LogoutLinks.js';
 import { connect } from 'react-redux';
-//navigace úplnì nahoøe
-//Podmínka pro ukázání navigace pøihlášeného/nepøihlášeného uživatele
-//Linky, které zmìní URL
+//navigace ï¿½plnï¿½ nahoï¿½e
+//Podmï¿½nka pro ukï¿½zï¿½nï¿½ navigace pï¿½ihlï¿½enï¿½ho/nepï¿½ihlï¿½enï¿½ho uï¿½ivatele
+//Linky, kterï¿½ zmï¿½nï¿½ URL
 const NavBar = (props) =>{
-  const { auth } = props
+  const { auth } = props;
   console.log(auth);
   return(
     <Navbar collapseOnSelect expand="lg" bg="light">
@@ -29,7 +29,7 @@ const NavBar = (props) =>{
     </Navbar>
   )
 }
-//vytáhnutí objektu auth z authReduceru
+//vytï¿½hnutï¿½ objektu auth z authReduceru
 const mapStateProps = (state) => {
   return{
     auth: state.firebase.auth

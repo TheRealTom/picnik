@@ -1,13 +1,16 @@
-const initState = {
-  basket: [
-    {id:'0',title:'Cake',description:'recepty na nejvíc top dortíky a koláèe pod sluncem'},
-    {id:'1',title:'Liborovi na dobrou noc',description:'Nìco co ho potììší a utiší jeho choutky'},
-    {id:'2',title:'Skola',description:':) Commit or Push, In Fortnite I am always in a bush'},
-  ]
-}
+const initState = {}
 
-const basketReducer = (state = initState, action) =>{
-  return state
+const basketReducer = (state = initState, action) => {
+  switch (action.type) {
+    case 'CREATE_BASKET':
+      console.log('created project ok');
+      return state;
+    case 'CREATE_BASKET_ERROR':
+      console.log('create basket error');
+      return state;
+    default:
+      return state;
+  }
 }
 
 export default basketReducer
