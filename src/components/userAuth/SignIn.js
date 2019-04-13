@@ -4,6 +4,7 @@ import '../../App.css';
 import { Redirect } from 'react-router-dom'
 import { connect } from 'react-redux';
 import { signIn } from '../../store/actions/authActions';
+
 //klasika register-TheRealTom
 class SignIn extends Component{
   constructor(props) {
@@ -18,19 +19,19 @@ class SignIn extends Component{
       sex: 'Someone'
     };
   }
-//zapsání zmìny
+//zapsï¿½nï¿½ zmï¿½ny
   handleChange = (e) => {
      this.setState({
        [e.target.id]: e.target.value
      })
    }
-//zmìna možnosti
+//zmï¿½na moï¿½nosti
 handleChangeOption = (e) => {
    this.setState({
      sex: e.target.id
    })
  }
-//pøi submitu
+//pï¿½i submitu
    handleSubmit = (e) => {
      e.preventDefault();
      this.props.signIn(this.state);
@@ -38,7 +39,7 @@ handleChangeOption = (e) => {
 
   render(){
     const { auth, authError } = this.props;
-    //redirect v pøípadì nepøihlášeného uživatele
+    //redirect v pï¿½ï¿½padï¿½ nepï¿½ihlï¿½enï¿½ho uï¿½ivatele
     if(auth.uid) return (<Redirect to='/profile/info' />);
     //form s errorem
     return(
@@ -84,13 +85,13 @@ handleChangeOption = (e) => {
     )
   }
 }
-//pøetáhnutí props
+//pï¿½etï¿½hnutï¿½ props
 const mapDispatchToProps = (dispatch) => {
   return {
     signIn: (userParams) => dispatch(signIn(userParams))
   }
 };
-//pøetáhnutí stavu auth a authError z reduceru
+//pï¿½etï¿½hnutï¿½ stavu auth a authError z reduceru
 const mapStateProps = (state) => {
   return {
     authError: state.auth.authError,

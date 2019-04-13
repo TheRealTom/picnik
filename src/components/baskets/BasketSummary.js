@@ -1,10 +1,10 @@
 import React from 'react'
-import { Card, Button } from 'react-bootstrap'
+import { Card } from 'react-bootstrap'
 import moment from 'moment'
 
 const BasketSummary = ({project}) => {
   return (
-    <div style={{marginTop: "20px"}}>
+    <div style={{marginTop: "10px", marginBottom: "10px"}}>
       <Card style={{ width: '25rem', height: '300px'}}>
         <Card.Body>
           <Card.Title style={{ color: 'black' }}>{project.title}</Card.Title>
@@ -14,7 +14,6 @@ const BasketSummary = ({project}) => {
             <small className="text-muted">Posted by {project.authorFirstName} {project.authorLastName} {moment(project.createdTime.toDate()).calendar()}</small>
           </Card.Footer>
         </Card>
-        
     </div>
   )
 }
