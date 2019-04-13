@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import '../../Profile.css';
 import '../../App.css';
 import { Redirect } from 'react-router-dom'
+import Spinner from 'react-bootstrap/Spinner'
 
 import { updateUser } from '../../store/actions/authActions';
 
@@ -106,7 +107,11 @@ class ProfileDelete extends Component{
               <input className="btn btn-primary" type="submit" value="Update Profile"/>
             </div>
           </form>
-        </div> : <div>Loading...</div>}
+        </div> : <div>
+          <Spinner animation="border" role="status">
+            <span className="sr-only">Loading...</span>
+          </Spinner>
+          </div>}
         <br />
       </div>
     )

@@ -8,7 +8,7 @@ import { connect } from 'react-redux';
 const LoginLinks = (props) =>{
   return(
     <Nav className="mr-auto">
-       <Navbar><Link to="/create">Create basket</Link></Navbar>
+      <Navbar><Link to="/create">Create basket</Link></Navbar>
       <Navbar><Link to='/' onClick={props.signOut}>Log Out</Link></Navbar>
       <Navbar><Link to="/profile">Profile</Link></Navbar>
     </Nav>

@@ -9,6 +9,7 @@ import ProfileInfo from './profileLayout/ProfileInfo.js';
 import ProfileFriendlist from './profileLayout/ProfileFriendlist.js';
 import ProfileNavBar from './profileLayout/ProfileNavBar.js';
 import ProfileUpdate from './profileLayout/ProfileUpdate.js';
+import Admin from './Admin.js';
 
 
 
@@ -29,6 +30,7 @@ const Profile = (props) => {
           <Route path="/profile/friendlist" component={ProfileFriendlist} />
           <Route path="/profile/baskets" component={ProfileBaskets} />
           <Route path="/profile/updateUser" component={ProfileUpdate} />
+          <Route path="/profile/adminStats" component={Admin} />
         </Switch>
       </div>
       </BrowserRouter>
