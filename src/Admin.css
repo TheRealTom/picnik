@@ -1,0 +1,13 @@
+.Admin-log{
+  text-align: left;
+}
+
+.Admin-title{
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.Admin-logTime{
+  color: grey;
+  font-size: 12px;
+}

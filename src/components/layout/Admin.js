@@ -1,7 +1,7 @@
 import React from 'react';
 import '../../App.css';
 
-import Notifications from './adminNotifications/Notifications';
+import Notifications from '../adminNots/Notifications';
 import Newsletter from './adminNotifications/Newsletter';
 import Charts from './adminNotifications/Charts';
 //stránka pro admina
