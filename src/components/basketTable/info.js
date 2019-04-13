@@ -9,7 +9,7 @@ const Info = (props) => {
             <Card border="secondary" style={{height: 'flex', marginTop: "2rem", 
             marginLeft: "1rem", marginRight: "1rem", marginBottom: "1rem"}}>
                 <Card.Body>
-                    <Card.Title style={{ color: 'black' }}>notifications</Card.Title>
+                    <Card.Title style={{ color: 'black' }}>Notifications</Card.Title>
                     <Card.Text style={{ color: 'black'}}>
                         { notifications && notifications.map(item => {
                             return (
