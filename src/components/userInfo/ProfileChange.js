@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import '../../Profile.css';
 import '../../App.css';
 import { Redirect } from 'react-router-dom'
-import Spinner from 'react-bootstrap/Spinner'
+//import  Spinner from 'react-bootstrap/Spinner'
 
 import { updateUser } from '../../store/actions/authActions';
 
@@ -21,7 +21,7 @@ class ProfileDelete extends Component{
       redirect: false
     }
   }
-//zpoždìní, aby se naèetli všechny props
+//zpoï¿½dï¿½nï¿½, aby se naï¿½etli vï¿½echny props
   componentDidMount(){
     this.setState({
       newName: this.props.profile.name,
@@ -33,14 +33,14 @@ class ProfileDelete extends Component{
       loaded: true
     });
   }
-//hlídá zmìnu v inputech
+//hlï¿½dï¿½ zmï¿½nu v inputech
   handleChange = (e) => {
     this.setState({
       [e.target.id]: e.target.value
     })
   }
-  // // //RADIO BUTTONY, nefunkèní logika
-  // //zmìna možnosti
+  // // //RADIO BUTTONY, nefunkï¿½nï¿½ logika
+  // //zmï¿½na moï¿½nosti
   // handleChangeOption = (e) => {
   //    this.setState({
   //      newSex: e.target.id
@@ -67,7 +67,7 @@ class ProfileDelete extends Component{
       newTel: this.props.profile.tel,
       newDate: this.props.profile.date
     })
-    //tady toto udìlám ještì foreachem snad
+    //tady toto udï¿½lï¿½m jeï¿½tï¿½ foreachem snad
     if(e.target.children[0].children[0].value !== ""){
       this.setState({newName: e.target.children[0].children[0].value});
     }else{
@@ -127,9 +127,7 @@ class ProfileDelete extends Component{
             </div>
           </form>
         </div> : <div>
-          <Spinner animation="border" role="status">
-            <span className="sr-only">Loading...</span>
-          </Spinner>
+          
           </div>}
         <br />
       </div>

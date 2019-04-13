@@ -2,26 +2,28 @@ const functions = require('firebase-functions');
 const admin = require('firebase-admin');
 admin.initializeApp(functions.config().firebase);
 
-//vytvoøení notifikace
+//vytvoï¿½enï¿½ notifikace
 const createNotification = (notification => {
   return admin.firestore().collection('notifications')
   .add(notification)
   .then(doc => console.log('Added notification', doc));
 })
-//log na vytvoøení košíku
+//log na vytvoï¿½enï¿½ koï¿½ï¿½ku
 exports.basketCreated = functions.firestore
 .document('baskets/{projectId}')
 .onCreate(doc => {
   const basket = doc.data();
   const notification = {
-    content: "Basket was created",
+    content: "created Basket",
     user: `${basket.authorFirstName} ${basket.authorLastName}`,
+    ID: `${basket.authorId}`,
     time: admin.firestore.FieldValue.serverTimestamp()
   }
 
   return createNotification(notification);
+
 })
-//log na vytvoøení usera
+//log na vytvoï¿½enï¿½ usera
 exports.userCreated = functions.auth.user()
 .onCreate(user => {
   return admin.firestore().collection('users')
@@ -35,7 +37,7 @@ exports.userCreated = functions.auth.user()
     return createNotification(notification);
   })
 })
-//log na update usera, není ohlídána zmìna emailu
+//log na update usera, nenï¿½ ohlï¿½dï¿½na zmï¿½na emailu
 exports.userUpdate = functions.firestore.document('users/{userId}')
 .onUpdate((change, context) => {
     const updatedUser = change.after._fieldsProto;

@@ -1,4 +1,4 @@
-//pøihlašování
+//pï¿½ihlaï¿½ovï¿½nï¿½
 export const loggIn = (authentization) => {
   return (dispatch, getState, {getFirebase}) => {
     const fire = getFirebase();
@@ -13,7 +13,7 @@ export const loggIn = (authentization) => {
     });
   }
 }
-//odhlašování
+//odhlaï¿½ovï¿½nï¿½
 export const signOut = () => {
   return(dispatch, getState, {getFirebase}) => {
     const fire = getFirebase();
@@ -47,7 +47,7 @@ export const signIn = (userParameters) => {
     });
   }
 }
-//reset hesla pomocí mailu
+//reset hesla pomocï¿½ mailu
 export const forgotPass = (userEmail) => {
   return(dispatch, getState, { getFirebase }) => {
     const firebase = getFirebase();
@@ -61,7 +61,7 @@ export const forgotPass = (userEmail) => {
     });
   }
 }
-//zmìna hesla(nedokonèená, ale funkèní)
+//zmï¿½na hesla(nedokonï¿½enï¿½, ale funkï¿½nï¿½)
 export const renewPassword = (newPass) => {
   return(dispatch, getState, { getFirebase }) => {
     const firebase = getFirebase();
@@ -75,7 +75,7 @@ export const renewPassword = (newPass) => {
     });
   }
 }
-//smazání úètu
+//smazï¿½nï¿½ ï¿½ï¿½tu
 export const deleteUser = (states) => {
   return(dispatch, getState, { getFirebase }) => {
     const firebase = getFirebase();
@@ -87,7 +87,7 @@ export const deleteUser = (states) => {
     });
   }
 }
-//Pøepsání usera novımi parametry
+//Pï¿½epsï¿½nï¿½ usera novï¿½mi parametry
 export const updateUser = (newInformation) => {
   return(dispatch, getState, { getFirebase, getFirestore }) => {
     const firebase = getFirebase();

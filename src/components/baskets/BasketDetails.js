@@ -21,7 +21,7 @@ const BasketDetails = (props) => {
             <Card.Text style={{ color: 'black'}}>{basket.description}</Card.Text>
           </Card.Body>
           <Card.Footer>
-            <small className="text-muted">Posted by {basket.authorFirstName}, {basket.authorLastName}, {moment(basket.createdTime.toDate()).calendar()}</small>
+            <small className="text-muted">Posted by {basket.authorFirstName} {basket.authorLastName} {moment(basket.createdTime.toDate()).calendar()}</small>
           </Card.Footer>
         </Card>
       </div>

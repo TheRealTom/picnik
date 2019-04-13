@@ -33,7 +33,7 @@ class CreateBasket extends Component{
             </div>
             <div className="form-group">
               <label htmlFor="description">description</label>
-              <textarea class="form-control" id="description" onChange={this.handleChange} placeholder ="Description" required/>
+              <textarea class="form-control" id="description" onChange={this.handleChange} placeholder ="Description" rows='1' required maxlength="250"/>
             </div>
             <div className ="form-button">
               <button type="submit" class="btn btn-primary">Create</button>

@@ -96,11 +96,7 @@
   margin-block-end: 5%;
 }
 
-.Container{
-  margin-block-start: 1%;
-  display: flex;
-  flex-direction: row
-}
+
 
 @keyframes App-logo-spin {
   from {

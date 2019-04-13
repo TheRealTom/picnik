@@ -14,7 +14,7 @@ class BasketTable extends Component {
    if (!auth.uid) return <Redirect to='/signin' />
     
     return(
-      <Container>
+      <Container >
         <Row>
           <Col>
             <BasketList projects={projects} />
@@ -40,7 +40,7 @@ const mapStateToProps = (state) => {
 export default compose(
   connect(mapStateToProps),
   firestoreConnect(props => [
-    { collection: 'baskets'},
-    { collection: 'notifications', limit: 3}
+    { collection: 'baskets' , orderBy: ['createdTime', 'desc']},
+    { collection: 'notifications',limit: 5, orderBy: ['time', 'desc']}
   ])  
 )(BasketTable)
