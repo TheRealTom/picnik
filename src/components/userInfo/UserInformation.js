@@ -50,6 +50,16 @@ class UserInformation extends Component{
           <tr>
               <td>
                 <div className="Profile-charakters">
+                  Sex:
+                </div>
+              </td>
+              <td>
+                {profile.sex}
+              </td>
+          </tr>
+          <tr>
+              <td>
+                <div className="Profile-charakters">
                   Mobile number:
                 </div>
               </td>

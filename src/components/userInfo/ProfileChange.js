@@ -16,6 +16,7 @@ class ProfileDelete extends Component{
       newEmail: "",
       newTel: "",
       newDate:  "",
+      newSex: "",
       loaded: false,
       redirect: false
     }
@@ -28,6 +29,7 @@ class ProfileDelete extends Component{
       newEmail: this.props.auth.email,
       newTel: this.props.profile.tel,
       newDate: this.props.profile.date,
+//      newSex: this.props.profile.sex,
       loaded: true
     });
   }
@@ -37,7 +39,25 @@ class ProfileDelete extends Component{
       [e.target.id]: e.target.value
     })
   }
+  // // //RADIO BUTTONY, nefunkèní logika
+  // //zmìna možnosti
+  // handleChangeOption = (e) => {
+  //    this.setState({
+  //      newSex: e.target.id
+  //    })
+  // }
+  // <div className="form-group ">
+  //   Sex:(if not checked, you will be someone)<br />
+  //   Male<input onChange={this.handleChangeOption} type="radio" className="form-control" name="sex" id="Male" />
+  // </div>
+  // <div className="form-group">
+  //   Female<input onChange={this.handleChangeOption} type="radio" className="form-control" name="sex" id="Female"/>
+  // </div>
+  // <div className="form-group">
+  //   Someone else<input onChange={this.handleChangeOption} type="radio" className="form-control" name="sex" id="Someone"/>
+  // </div>
 
+//submit
   handleSubmit = (e) => {
     e.preventDefault();
     this.setState({
@@ -47,7 +67,7 @@ class ProfileDelete extends Component{
       newTel: this.props.profile.tel,
       newDate: this.props.profile.date
     })
-    //tady toto udìlám ještì foreachem
+    //tady toto udìlám ještì foreachem snad
     if(e.target.children[0].children[0].value !== ""){
       this.setState({newName: e.target.children[0].children[0].value});
     }else{

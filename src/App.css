@@ -38,11 +38,11 @@
 }
 
 .App-logForm {
-  color: white;
+  color: black;
   display: flex;
   justify-content: center;
   align-items: center;
-  text-align: justify;
+  text-align: center;
 }
 
 .buttons{

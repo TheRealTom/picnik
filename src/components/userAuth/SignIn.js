@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Header from '../layout/Header';
+import '../../App.css';
 import { Redirect } from 'react-router-dom'
 import { connect } from 'react-redux';
 import { signIn } from '../../store/actions/authActions';
@@ -13,7 +14,8 @@ class SignIn extends Component{
       name: '',
       surname: '',
       tel: '',
-      date: ''
+      date: '',
+      sex: 'Someone'
     };
   }
 //zapsání zmìny
@@ -22,6 +24,12 @@ class SignIn extends Component{
        [e.target.id]: e.target.value
      })
    }
+//zmìna možnosti
+handleChangeOption = (e) => {
+   this.setState({
+     sex: e.target.id
+   })
+ }
 //pøi submitu
    handleSubmit = (e) => {
      e.preventDefault();
@@ -51,6 +59,16 @@ class SignIn extends Component{
             </div>
             <div className="form-group">
                <input onChange={this.handleChange} type="tel" className="form-control" id="tel" placeholder="Mobile number" pattern="^[0-9\s]$" title="Example: 938393898" required/>
+            </div>
+            <div className="form-group ">
+              Sex:(if not checked, you will be someone)<br />
+              Male<input onChange={this.handleChangeOption} type="radio" className="form-control" name="sex" id="Male" />
+            </div>
+            <div className="form-group">
+              Female<input onChange={this.handleChangeOption} type="radio" className="form-control" name="sex" id="Female"/>
+            </div>
+            <div className="form-group">
+              Someone else<input onChange={this.handleChangeOption} type="radio" className="form-control" name="sex" id="Someone"/>
             </div>
             <div className="form-group">
                <input onChange={this.handleChange} type="date" className="form-control" id="date" placeholder="Date of birth" required />

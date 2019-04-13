@@ -37,7 +37,8 @@ export const signIn = (userParameters) => {
         name: userParameters.name,
         surname: userParameters.surname,
         tel: userParameters.tel,
-        date: userParameters.date
+        date: userParameters.date,
+        sex: userParameters.sex
       })
     }).then(() => {
       dispatch({ type: 'SUCCESSFUL_SIGNIN' });

@@ -40,7 +40,7 @@ exports.userUpdate = functions.firestore.document('users/{userId}')
 .onUpdate((change, context) => {
     const updatedUser = change.after._fieldsProto;
     const beforeUser = change.before._fieldsProto;
-    if(updatedUser.name.stringValue === beforeUser.name.stringValue && updatedUser.surname.stringValue === beforeUser.surname.stringValue && updatedUser.date.stringValue === beforeUser.date.stringValue && updatedUser.tel.stringValue === beforeUser.tel.stringValue){
+    if(updatedUser === beforeUser){
       console.log('Nothing has changed');
       return null;
     }
