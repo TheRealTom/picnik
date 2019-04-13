@@ -1,5 +1,6 @@
 import React from 'react';
 import moment from 'moment';
+import { ListGroup } from 'react-bootstrap';
 import '../../../App.css';
 import '../../../Admin.css';
 
@@ -11,11 +12,13 @@ const NotificationsLog = (props) => {
         Logs:
       </div>
       {notifications && notifications.map(item =>{
-        return <li key={item.id}>
-                <span>{item.user}</span><br />
-                <span>{item.content}</span><br />
+        return <ListGroup>
+              <ListGroup.Item as='li' key={item.id}>
+                <span className="Admin-text">{item.content}</span><br />
+                <span className="Admin-text">By:&nbsp;{item.user}</span><br />
                 <span className="Admin-logTime">{moment(item.time.toDate()).fromNow()}</span>
-              </li>
+              </ListGroup.Item>
+              </ListGroup>
       })}
     </div>
   )

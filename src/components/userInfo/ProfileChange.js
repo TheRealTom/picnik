@@ -73,7 +73,6 @@ class ProfileDelete extends Component{
     }else{
       this.setState({newDate: this.props.profile.date})
     }
-    console.log(this.state);
     this.props.updateUser(this.state);
     this.setState({ redirect: true})
   }

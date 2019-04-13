@@ -11,3 +11,10 @@
   color: grey;
   font-size: 12px;
 }
+
+.Admin-text{
+  font-size: 16px;
+}
+.Admin-text-name{
+  text-align: right;
+}
