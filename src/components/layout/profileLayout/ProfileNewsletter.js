@@ -1,9 +1,11 @@
 import React from 'react';
+import Newsletter from '../adminNotifications/Newsletter';
 
 const ProfileNewsletter = () =>{
   return(
-    <div>
-      <p>ProfileNewsletter</p>
+      <div>
+        <div>You like us? Want to keep touch with us? <br />So subscribe to newsletter now!</div>
+          <Newsletter />
     </div>
   )
 }

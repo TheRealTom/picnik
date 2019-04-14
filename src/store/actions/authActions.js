@@ -117,3 +117,19 @@ export const updateUser = (newInformation) => {
     });
   }
 }
+//Newsletter subscribe
+export const newsletterTrue = () => {
+  return(dispatch, getState, { getFirebase, getFirestore }) => {
+    const firebase = getFirebase();
+    const firestore = getFirestore();
+    const user = firebase.auth().currentUser;
+
+    return firestore.collection('users').doc(user.uid).update({
+        newsletter: true
+    }).then(() => {
+      dispatch({ type: 'SUCCESSFUL_NEWSLETTER'})
+    }).catch((err) => {
+      dispatch({ type: 'FAILED_NEWSLETTER' })
+    });
+  }
+}

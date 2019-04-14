@@ -11,8 +11,8 @@ const BasketList = (props) => {
       { projects  && projects.map(project => {
         if (project.authorId !== auth.uid) return null;
         return(
-            <Link to={'/basket/' + project.id}>
-              <BasketSummary project={project} key={projects.id} />
+          <Link to={'/basket/' + project.id} key={project.id}>
+              <BasketSummary project={project}/>
             </Link>
         )
       })}

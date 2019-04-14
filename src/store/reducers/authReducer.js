@@ -69,14 +69,14 @@ const authReducer = (state = initState, action) => {
         ...state,
         authError: 'Your account has not been deleted'
       };
-    case 'SUCCESSFUL_UPDATE_PROFILE':
-      console.log('Your account has been updated');
+    case 'SUCCESSFUL_NEWSLETTER':
+      console.log('Your account has subscribed to newsletter');
       return {
         ...state,
         authError: null
       };
-    case 'FAILED_UPDATE_PROFILE':
-      console.log('Updating account failed');
+    case 'FAILED_NEWSLETTER':
+      console.log('Failed to subscribe to newsletter');
       return {
         ...state,
         authError: 'Update was not succesful'
