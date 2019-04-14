@@ -3,7 +3,8 @@ import '../../Profile.css';
 import { connect } from 'react-redux';
 import { Table } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-
+//gets user information - Tom
+//in console is an error because of bootstrap, but everything is working smooth
 class UserInformation extends Component{
   constructor(props){
     super(props);
@@ -87,7 +88,7 @@ class UserInformation extends Component{
   };
 }
 
-
+//gets state to props
 const mapStateProps = (state) => {
   return{
     auth: state.firebase.auth,

@@ -1,7 +1,7 @@
 import React from 'react';
 import Header from './Header';
 import '../../App.css'
-//normální stránka
+//we could probably use something that Libor use for creating baskets, but that is not our priority now.
 const Feedback = () =>{
   return(
       <div className="App-soon">

@@ -4,6 +4,7 @@ import '../../Profile.css';
 
 import { renewPassword } from '../../store/actions/authActions';
 
+//class for new password - Tom
 class NewPassword extends Component{
   constructor(props){
     super(props);
@@ -14,7 +15,7 @@ class NewPassword extends Component{
     }
   }
 
-  //zachytávání zmìn
+  //change handler
   handleChange = (e) => {
     this.setState({
       [e.target.id]: e.target.value
@@ -23,7 +24,6 @@ class NewPassword extends Component{
   //submit
   handleSubmit = (e) => {
     e.preventDefault();
-    //když se nebude shodovat newPass a confirmPass, tak se to provede, error se mi tu ještì nechce zobrazit :/
     if(this.state.newPass === this.state.confirmPass){
       this.props.renewPassword(this.state);
     }
@@ -32,7 +32,7 @@ class NewPassword extends Component{
   render(){
     const { authError } = this.props;
 
-/*VERZE PRO OVÌØENÍ STARÝM HESLEM NEFUNGUJE ZATÍM
+/*Version with old password does not work
 *<form onSubmit={this.handleSubmit}>
 *  <div className="form-group">
 *      <input type="password" onChange={this.handleChange} id="oldPass" placeholder="Old Password" required/>
@@ -49,14 +49,14 @@ class NewPassword extends Component{
               <input type="password" onChange={this.handleChange} className="form-control" id="newPass" placeholder="New password" required/>
             </div>
             <div className="form-group">
-              <input type="password" onChange={this.handleChange} className="form-control" id="confirmPass" placeholder="New password again" required/>
+              <input type="password" onChange={this.handleChange} className="form-control" id="confirmPass" placeholder="Confirm password" required/>
             </div>
             <div className="Profile-change">
               <button type="submit" className="btn btn-primary">Change</button>
             </div>
           </form>
           <div className="Profile-errorText">
-            {authError ? <p>Ahoj</p> : null}
+            {authError ? <p>{authError}</p> : null}
           </div>
         </div>
       <br />
@@ -64,14 +64,14 @@ class NewPassword extends Component{
     )
   }
 }
-
+//gets state to props
 const mapStateToProps = (state) => {
   return {
     auth: state.firebase.auth,
     authError: state.firebase.authError
   }
 }
-
+//gets dispatch to props
 const mapDispatchToProps = (dispatch) => {
   return {
     renewPassword: (newPass) => dispatch(renewPassword(newPass))

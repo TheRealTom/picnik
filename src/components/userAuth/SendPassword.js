@@ -3,7 +3,7 @@ import '../../App.css';
 import { connect } from 'react-redux';
 import { forgotPass } from '../../store/actions/authActions';
 
-//stránka pro odeslání ztraceného hesla
+//class for sending reset password mail - Tom
 class SendPassword extends Component{
   constructor(props) {
     super(props);
@@ -11,22 +11,20 @@ class SendPassword extends Component{
       forgotPass: ''
     };
   }
-//zapsání zmìny
+//change handler
   handleChange = (e) => {
      this.setState({
        [e.target.id]: e.target.value
      })
   }
-//pøi submitu
+//submit
   handleSubmit = (e) => {
     e.preventDefault();
     this.props.forgotPass(this.state);
   }
 
   render(){
-    //vytvoøení promìnné pro chycení erroru
     const { authError } = this.props;
-    //layout
     return(
         <div className="App">
           <form onSubmit={this.handleSubmit}>
@@ -44,13 +42,13 @@ class SendPassword extends Component{
     )
   }
 }
-//zachycení states do props
+//data to props
 const mapStateToProps = (state) => {
   return {
     authError: state.auth.authError
   }
 }
-//komunikace s props
+//dispatch to props
 const mapDispatchToProps = (dispatch) => {
   return{
     forgotPass: (email) => dispatch(forgotPass(email))

@@ -1,3 +1,5 @@
+// // Libor
+//Creation of basket
 export const createBasket = (project) => {
     return (dispatch, getState, { getFirestore }) => {
         //vytvořit async volání databáze
@@ -9,11 +11,11 @@ export const createBasket = (project) => {
             authorFirstName: profile.name,
             authorLastName: profile.surname,
             authorId: authorID,
-            createdTime: new Date()    
+            createdTime: new Date()
         }).then(() => {
             dispatch({ type: 'CREATE_BASKET' });
         }).catch((err) => {
             dispatch({ type: 'CREATE_BASKET_ERROR', err });
-        })  
+        })
     }
 };

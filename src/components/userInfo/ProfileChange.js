@@ -6,8 +6,8 @@ import { Redirect } from 'react-router-dom'
 //import  Spinner from 'react-bootstrap/Spinner'
 
 import { updateUser } from '../../store/actions/authActions';
-
-class ProfileDelete extends Component{
+//update user class - TOm
+class ProfileChange extends Component{
   constructor(props){
     super(props);
     this.state = {
@@ -39,8 +39,8 @@ class ProfileDelete extends Component{
       [e.target.id]: e.target.value
     })
   }
-  // // //RADIO BUTTONY, nefunk�n� logika
-  // //zm�na mo�nosti
+  // // //RADIO BUTTONS
+  // // it is not working properly
   // handleChangeOption = (e) => {
   //    this.setState({
   //      newSex: e.target.id
@@ -67,7 +67,7 @@ class ProfileDelete extends Component{
       newTel: this.props.profile.tel,
       newDate: this.props.profile.date
     })
-    //tady toto ud�l�m je�t� foreachem snad
+    //It could be done by foreach
     if(e.target.children[0].children[0].value !== ""){
       this.setState({newName: e.target.children[0].children[0].value});
     }else{
@@ -99,6 +99,7 @@ class ProfileDelete extends Component{
 
   render(){
     const { profile } = this.props;
+    //redirect
     if(this.state.redirect === true) return(<Redirect to='/profile/info' />);
     return(
       <div className="Profile-info">
@@ -127,24 +128,25 @@ class ProfileDelete extends Component{
             </div>
           </form>
         </div> : <div>
-          
+
           </div>}
         <br />
       </div>
     )
   }
 }
-
+//gets state to props
 const mapStateToProps = (state) => {
   return {
     auth: state.firebase.auth,
     profile: state.firebase.profile
   }
 }
+//gets dispatch to props
 const mapDispatchToProps = (dispatch) => {
   return {
     updateUser: (newData) => dispatch(updateUser(newData))
   }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(ProfileDelete);
+export default connect(mapStateToProps, mapDispatchToProps)(ProfileChange);

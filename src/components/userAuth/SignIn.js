@@ -5,7 +5,7 @@ import { Redirect } from 'react-router-dom'
 import { connect } from 'react-redux';
 import { signIn } from '../../store/actions/authActions';
 
-//klasika register-TheRealTom
+//class for SignIn -TheRealTom
 class SignIn extends Component{
   constructor(props) {
     super(props);
@@ -19,19 +19,19 @@ class SignIn extends Component{
       sex: 'Someone'
     };
   }
-//zaps�n� zm�ny
+//change handler
   handleChange = (e) => {
      this.setState({
        [e.target.id]: e.target.value
      })
    }
-//zm�na mo�nosti
+//changed option handler
 handleChangeOption = (e) => {
    this.setState({
      sex: e.target.id
    })
  }
-//p�i submitu
+//submit for signIn
    handleSubmit = (e) => {
      e.preventDefault();
      this.props.signIn(this.state);
@@ -39,9 +39,9 @@ handleChangeOption = (e) => {
 
   render(){
     const { auth, authError } = this.props;
-    //redirect v p��pad� nep�ihl�en�ho u�ivatele
+    //redirect
     if(auth.uid) return (<Redirect to='/profile/info' />);
-    //form s errorem
+    //form
     return(
         <div>
           <Header />
@@ -85,13 +85,13 @@ handleChangeOption = (e) => {
     )
   }
 }
-//p�et�hnut� props
+//dispatch to props
 const mapDispatchToProps = (dispatch) => {
   return {
     signIn: (userParams) => dispatch(signIn(userParams))
   }
 };
-//p�et�hnut� stavu auth a authError z reduceru
+//state to props
 const mapStateProps = (state) => {
   return {
     authError: state.auth.authError,

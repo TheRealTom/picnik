@@ -12,7 +12,9 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import BasketTable from './components/basketTable/BasketTable';
 import BasketDetails from './components/baskets/BasketDetails.js';
 import CreateBasket from './components/baskets/CreateBasket';
-
+/* Tom/Libor
+* class for routing through app 
+*/
 class App extends Component {
   constructor() {
     super();
@@ -44,7 +46,7 @@ class App extends Component {
         </div>
         <footer className="App-footer">
           <p>
-            Made by TheRealTom and Libor for final exam purposes.
+            Made by TheRealTom and Libor for the final exam purposes.
           </p>
         </footer>
       </div>

@@ -3,11 +3,11 @@ import Header from '../layout/Header';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import BasketTable from '../basketTable/BasketTable';
-//propojenï¿½ s databï¿½zï¿½
+//connection to database
 import { loggIn } from '../../store/actions/authActions';
 
 
-//klasika login parametry
+//classic login via email and password - Tom
 class Login extends Component{
   constructor(props) {
     super(props);
@@ -16,13 +16,13 @@ class Login extends Component{
       password: ''
     };
   }
-//zachytï¿½vï¿½nï¿½ zmï¿½n
+//writes to state when something changed
  handleChange = (e) => {
     this.setState({
       [e.target.id]: e.target.value
     })
   }
-//submit
+//submit for login
   handleSubmit = (e) => {
     e.preventDefault();
     this.props.loggIn(this.state);
@@ -30,7 +30,7 @@ class Login extends Component{
 
   render(){
     const { auth, profile } = this.props;
-//podmínka zda jsme pøihlášení nebo ne
+//check if we are logged in
     if (auth.uid){
       return(
       <div>
@@ -42,7 +42,7 @@ class Login extends Component{
       </div>
     )
     }
-    //form s errory
+    //form for login
     const { authError } = this.props;
     return(
         <div>
@@ -68,7 +68,7 @@ class Login extends Component{
     )
   }
 }
-//vytï¿½hneme z reduceru authError a auth pro ovï¿½ï¿½enï¿½ pï¿½ï¿½hlï¿½enï¿½
+//gets data from states
 const mapStateToProps = (state) => {
   return{
     authError: state.auth.authError,
@@ -76,7 +76,7 @@ const mapStateToProps = (state) => {
     profile: state.firebase.profile
   }
 }
-//pï¿½etï¿½hnutï¿½ props do authAction
+//dispatch to Props
 const mapDispatchToProps = (dispatch) => {
   return{
     loggIn: (creds) => dispatch(loggIn(creds))

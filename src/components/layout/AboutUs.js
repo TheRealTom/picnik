@@ -1,7 +1,7 @@
 import React from 'react';
 import Header from './Header';
 import '../../App.css'
-//normální stránka
+//just a page, that everybody can see
 const AboutUs = () =>{
   return(
       <div className="App-about">

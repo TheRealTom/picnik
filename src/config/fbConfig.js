@@ -1,7 +1,7 @@
 import firebase from 'firebase/app';
 import 'firebase/firestore';
 import 'firebase/auth';
-
+//implementation of firebase - Tom/Libor
 var config = {
   apiKey: "AIzaSyBMFZfdWx8EYxYXHP1VVS5MEFaCrMjrwAo",
   authDomain: "picnic-mp123456789.firebaseapp.com",

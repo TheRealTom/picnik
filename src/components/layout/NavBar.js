@@ -4,9 +4,7 @@ import { Link } from 'react-router-dom';
 import LoginLinks from './LoginLinks.js';
 import LogoutLinks from './LogoutLinks.js';
 import { connect } from 'react-redux';
-//navigace �pln� naho�e
-//Podm�nka pro uk�z�n� navigace p�ihl�en�ho/nep�ihl�en�ho u�ivatele
-//Linky, kter� zm�n� URL
+//Navigetion bar for everybody - Tom
 const NavBar = (props) =>{
   const { auth } = props;
   console.log(auth);
@@ -29,7 +27,7 @@ const NavBar = (props) =>{
     </Navbar>
   )
 }
-//vyt�hnut� objektu auth z authReduceru
+//gets state from auth
 const mapStateProps = (state) => {
   return{
     auth: state.firebase.auth

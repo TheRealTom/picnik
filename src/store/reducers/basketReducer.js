@@ -1,5 +1,6 @@
 const initState = {}
-
+// // Libor
+//error messiging via basketReducer
 const basketReducer = (state = initState, action) => {
   switch (action.type) {
     case 'CREATE_BASKET':

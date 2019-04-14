@@ -2,13 +2,13 @@ const functions = require('firebase-functions');
 const admin = require('firebase-admin');
 admin.initializeApp(functions.config().firebase);
 
-//vytvo�en� notifikace
+//Creation of a notification
 const createNotification = (notification => {
   return admin.firestore().collection('notifications')
   .add(notification)
   .then(doc => console.log('Added notification', doc));
 })
-//log na vytvo�en� ko��ku
+//log about new created basket - Libor
 exports.basketCreated = functions.firestore
 .document('baskets/{projectId}')
 .onCreate(doc => {
@@ -23,7 +23,7 @@ exports.basketCreated = functions.firestore
   return createNotification(notification);
 
 })
-//log na vytvo�en� usera
+//log about new signed user - Tom
 exports.userCreated = functions.auth.user()
 .onCreate(user => {
   return admin.firestore().collection('users')
@@ -37,7 +37,8 @@ exports.userCreated = functions.auth.user()
     return createNotification(notification);
   })
 })
-//log na update usera, nen� ohl�d�na zm�na emailu
+//log about update user - Tom
+// BUG - does nothing when email is changed, because of the reauthentificate problem
 exports.userUpdate = functions.firestore.document('users/{userId}')
 .onUpdate((change, context) => {
     const updatedUser = change.after._fieldsProto;
@@ -54,7 +55,7 @@ exports.userUpdate = functions.firestore.document('users/{userId}')
     }
     return createNotification(notification);
   })
-//log na delete usera
+//log about a user deletion - Tom
 exports.userDeleted = functions.auth.user()
 .onDelete(user => {
   return admin.firestore().collection('users')

@@ -1,7 +1,7 @@
 import React from 'react';
 import Header from './Header';
 import '../../App.css'
-//normální stránka
+//terms layout 
 const Terms = () =>{
   return(
       <div>

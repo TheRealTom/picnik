@@ -4,6 +4,7 @@ import '../../Profile.css';
 
 import { deleteUser } from '../../store/actions/authActions';
 
+//delete user class - Tom
 class ProfileDelete extends Component{
   constructor(props){
     super(props);
@@ -12,12 +13,13 @@ class ProfileDelete extends Component{
       confirmPassword: '',
     }
   }
+  //handle change in form
   handleChange = (e) => {
     this.setState({
       [e.target.id]: e.target.value
     })
   }
-
+  //submit
   handleSubmit = (e) => {
     e.preventDefault();
     if(this.state.currentPassword === this.state.confirmPassword) {
@@ -50,12 +52,13 @@ class ProfileDelete extends Component{
     )
   }
 }
-
+//gets state to props
 const mapStateToProps = (state) => {
   return {
     authError: state.firebase.authError
   }
 }
+//gets dispatch to props
 const mapDispatchToProps = (dispatch) => {
   return {
     deleteUser: (something) => dispatch(deleteUser(something))

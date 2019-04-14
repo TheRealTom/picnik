@@ -4,7 +4,7 @@ import '../../App.css';
 import Notifications from '../adminNots/Notifications';
 import Newsletter from './adminNotifications/Newsletter';
 import Charts from './adminNotifications/Charts';
-//stránka pro admina
+//layout for Admin - Tom
 const Admin = () =>{
   return(
       <div className="App">

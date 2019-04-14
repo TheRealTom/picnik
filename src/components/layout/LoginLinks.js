@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import { signOut } from '../../store/actions/authActions.js'
 import { connect } from 'react-redux';
 
-//kdy� jsme p�ihl�en�, uvid�me tuhle navigaci
+//When we are logged in, we will see this Navigation bar - Tom/Libor
 const LoginLinks = (props) =>{
   return(
     <Nav className="mr-auto">
@@ -14,7 +14,7 @@ const LoginLinks = (props) =>{
     </Nav>
   )
 }
-//odhl�en�
+//geting sign off dispatch
 const mapDispatchToProps = (dispatch) => {
   return {
     signOut: () => dispatch(signOut())

@@ -1,5 +1,5 @@
 import React from 'react';
-//hlavièka s fotkou
+//layout for header - Tom/Libor
 
 const Header = () =>{
   return(

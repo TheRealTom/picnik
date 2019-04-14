@@ -1,7 +1,8 @@
 const initState = {
   authError: null
 }
-//reducery na vrácení stavu, slouží hlavnì jako takový error messaging
+// // Tom
+//error messiging via authReducer
 const authReducer = (state = initState, action) => {
   switch(action.type){
     case 'FAILED_LOGIN':

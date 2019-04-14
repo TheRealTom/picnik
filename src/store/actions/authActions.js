@@ -1,4 +1,5 @@
-//p�ihla�ov�n�
+// // Tom
+//Login
 export const loggIn = (authentization) => {
   return (dispatch, getState, {getFirebase}) => {
     const fire = getFirebase();
@@ -13,7 +14,7 @@ export const loggIn = (authentization) => {
     });
   }
 }
-//odhla�ov�n�
+//log out
 export const signOut = () => {
   return(dispatch, getState, {getFirebase}) => {
     const fire = getFirebase();
@@ -23,7 +24,7 @@ export const signOut = () => {
   });
   }
 }
-//registrace
+//Sign in
 export const signIn = (userParameters) => {
   return(dispatch, getState, {getFirebase, getFirestore}) => {
     const firebase = getFirebase();
@@ -47,7 +48,7 @@ export const signIn = (userParameters) => {
     });
   }
 }
-//reset hesla pomoc� mailu
+//Reset of password
 export const forgotPass = (userEmail) => {
   return(dispatch, getState, { getFirebase }) => {
     const firebase = getFirebase();
@@ -61,7 +62,8 @@ export const forgotPass = (userEmail) => {
     });
   }
 }
-//zm�na hesla(nedokon�en�, ale funk�n�)
+//change of password
+//reauthentification problem, because of firebase
 export const renewPassword = (newPass) => {
   return(dispatch, getState, { getFirebase }) => {
     const firebase = getFirebase();
@@ -75,19 +77,24 @@ export const renewPassword = (newPass) => {
     });
   }
 }
-//smaz�n� ��tu
+//Delete user
+//reauthentification problem, because of firebase
 export const deleteUser = (states) => {
-  return(dispatch, getState, { getFirebase }) => {
+  return(dispatch, getState, { getFirebase, getFirestore }) => {
     const firebase = getFirebase();
+    const firestore = getFirestore();
+
     var user = firebase.auth().currentUser;
     user.delete().then(function() {
+      firestore.collection('users').doc(user.uid).delete();
       dispatch({ type: 'SUCCESSFUL_DELETE'})
     }).catch((err) => {
       dispatch({ type: 'FAILED_DELETE_REQUEST' })
     });
   }
 }
-//P�eps�n� usera nov�mi parametry
+//Update user
+//reauthentification problem, because of firebase
 export const updateUser = (newInformation) => {
   return(dispatch, getState, { getFirebase, getFirestore }) => {
     const firebase = getFirebase();
