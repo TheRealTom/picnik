@@ -118,7 +118,7 @@ class ProfileChange extends Component{
               <input type="date" onChange={this.handleChange} className="form-control" id="newDate" />
             </div>
             <div className="form-group">
-              <input type="tel" onChange={this.handleChange} className="form-control" id="newTel" placeholder="Enter New Mobile Number"  />
+              <input type="tel" onChange={this.handleChange} className="form-control" id="newTel" placeholder="Enter New Mobile Number" pattern="[+]?[()/0-9. -]{9,}$" title="Example: 123456789"/>
             </div>
             <div className="form-group">
               <input type="email" onChange={this.handleChange} className="form-control" id="newEmail" placeholder="Enter New Email"  />

@@ -14,7 +14,7 @@ const ProfileNavBar = (props) =>{
         <Nav.Item>
           <Nav.Link eventKey="newsletter"><Link to='/profile/newsletter'>Newsletter</Link></Nav.Link>
         </Nav.Item>
-          {profile.role=="admin" ? <Nav.Item>
+          {profile.role==="admin" ? <Nav.Item>
                     <Nav.Link eventKey="adminNots"><Link to='/profile/adminStats'>Admin Log</Link></Nav.Link>
                   </Nav.Item> : null}
       </Nav>

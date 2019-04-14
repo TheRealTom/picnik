@@ -4,7 +4,6 @@ import SignIn from './components/userAuth/SignIn';
 import Login from './components/userAuth/Login';
 import AboutUs from './components/layout/AboutUs';
 import Terms from './components/layout/Terms';
-import Feedback from './components/layout/Feedback';
 import ForgotPassword from './components/layout/ForgotPassword';
 import NavBar from './components/layout/NavBar';
 import Profile from './components/layout/Profile';
@@ -13,7 +12,7 @@ import BasketTable from './components/basketTable/BasketTable';
 import BasketDetails from './components/baskets/BasketDetails.js';
 import CreateBasket from './components/baskets/CreateBasket';
 /* Tom/Libor
-* class for routing through app 
+* class for routing through app
 */
 class App extends Component {
   constructor() {
@@ -36,7 +35,6 @@ class App extends Component {
             <Route path="/signin" component={SignIn} />
             <Route path="/about" component={AboutUs} />
             <Route path="/terms" component={Terms} />
-            <Route path="/feedback" component={Feedback} />
             <Route path="/profile" component={Profile} />
             <Route path="/forgotPassword" component={ForgotPassword} />
             <Route path="/baskets" component={BasketTable} />

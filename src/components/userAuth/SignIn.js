@@ -59,7 +59,7 @@ handleChangeOption = (e) => {
                <input onChange={this.handleChange} type="text" className="form-control" id="surname" placeholder="Surname" required/>
             </div>
             <div className="form-group">
-               <input onChange={this.handleChange} type="tel" className="form-control" id="tel" placeholder="Mobile number" pattern="^[0-9\s]$" title="Example: 938393898" required/>
+               <input onChange={this.handleChange} type="tel" className="form-control" id="tel" placeholder="Mobile number" pattern="[+]?[()/0-9. -]{9,}$" title="Example: 938393898" required/>
             </div>
             <div className="form-group ">
               Sex:(if not checked, you will be someone)<br />
@@ -73,6 +73,9 @@ handleChangeOption = (e) => {
             </div>
             <div className="form-group">
                <input onChange={this.handleChange} type="date" className="form-control" id="date" placeholder="Date of birth" required />
+            </div>
+            <div className="form-group">
+               <input type="checkbox" className="form-control" id="terms" placeholder="Terms" required /> By checking this box you accept our <a href="/terms">terms and policies</a>
             </div>
             <div className ="buttons">
                <button type="submit" className="btn btn-primary">SignUp</button>

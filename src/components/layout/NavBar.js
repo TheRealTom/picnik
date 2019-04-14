@@ -18,7 +18,6 @@ const NavBar = (props) =>{
        <Nav className="mr-auto">
          <Navbar><Link to="/about">About Us</Link></Navbar>
          <Navbar><Link to="/terms">Terms</Link></Navbar>
-         <Navbar><Link to="/feedback">Feedback</Link></Navbar>
        </Nav>
        <Nav>
          {auth.uid ? <LoginLinks /> :<LogoutLinks />}
