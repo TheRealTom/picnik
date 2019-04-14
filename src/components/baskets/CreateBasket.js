@@ -17,7 +17,7 @@ class CreateBasket extends Component{
     e.preventDefault();
     // console.log(this.state);
     this.props.createBasket(this.state)
-    this.props.history.push('/baskets');
+    this.props.history.push('/');
   }
 
   render(){
