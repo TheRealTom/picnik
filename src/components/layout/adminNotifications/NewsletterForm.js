@@ -1,6 +1,6 @@
 import React from 'react';
 import '../../../Admin.css'
-//just a page, that everybody can see
+//just a form for sending newsletter - Tom
 const NewsletterForm = () =>{
   return(
       <div className="Admin-title">

@@ -1,13 +1,13 @@
 import React from 'react';
 import '../../../App.css';
 import '../../../Admin.css';
-import { Doughnut, Pie } from 'react-chartjs-2';
+import { Doughnut } from 'react-chartjs-2';
 import { connect } from 'react-redux';
 import { compose } from 'redux';
 import { firestoreConnect } from 'react-redux-firebase';
 import { Container, Row, Col } from 'react-bootstrap';
 
-
+//creating charts - Tom
 const Charts = (props) => {
   const { users, notifications } = props;
   var newsletterTrue = 0;
@@ -22,7 +22,7 @@ const Charts = (props) => {
   var m = 0;
   var f = 0;
   var s = 0;
-  users && users.map(item =>{
+  users && users.map(item => {
     if(item.sex === "Female"){
       f += 1;
     }else if (item.sex === "Male") {
@@ -31,9 +31,9 @@ const Charts = (props) => {
       s += 1;
     }
     if(item.newsletter){
-      newsletterTrue +=1
+      return newsletterTrue +=1;
     }else{
-      newsletterFalse +=1
+      return newsletterFalse +=1;
     }
   })
   const boys = m;
@@ -42,15 +42,15 @@ const Charts = (props) => {
 
   notifications && notifications.map(item =>{
     if(item.content === "created Basket"){
-      basketCreate += 1;
+      return basketCreate += 1;
     }else if (item.content === "User was created") {
-      userCreate += 1;
+      return userCreate += 1;
     }else if (item.content === "User was updated") {
-      userUpdate += 1;
+      return userUpdate += 1;
     }else if (item.content === "User was deleted") {
-      userDelete += 1;
+      return userDelete += 1;
     }else{
-      something += 1
+      return something += 1
     }
   })
   const dataSex =  {
