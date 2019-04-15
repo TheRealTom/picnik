@@ -147,7 +147,7 @@ const dataNots =  {
 }
   return(
     <div className="Admin-log">
-      <div className="Admin-title">Charts</div>
+      <div className="Admin-title">Graphs:</div>
       <br />
       <Container>
         <Row>
