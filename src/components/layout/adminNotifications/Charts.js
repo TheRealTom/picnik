@@ -53,6 +53,7 @@ const Charts = (props) => {
       return something += 1
     }
   })
+
   const dataSex =  {
     labels: ['Female', 'Male', 'Someone'],
     datasets: [{
@@ -82,6 +83,8 @@ const Charts = (props) => {
     }
 }
 
+//DataNewsletter graf - vlastnosti 
+//Libor
 const dataNewsletter =  {
   labels: ['Subscribed', 'Didn\'t subscribed'],
   datasets: [{
