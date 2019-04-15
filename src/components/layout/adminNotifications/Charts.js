@@ -151,9 +151,9 @@ const dataNots =  {
       <br />
       <Container>
         <Row>
-          <Col xm={2}><Doughnut data={dataSex} /></Col>
-          <Col xm={2}><Doughnut data={dataNewsletter} /></Col>
-          <Col xm={2}><Doughnut data={dataNots} /></Col>
+          <Col xs='auto' md={6}><Doughnut data={dataSex} /></Col>
+          <Col xs='auto' md={6}><Doughnut data={dataNewsletter} /></Col>
+          <Col xs='auto' md={6}><Doughnut data={dataNots} /></Col>
         </Row>
       </Container>
     </div>

@@ -133,13 +133,13 @@ const Terms = () =>{
 	(including negligence) and for breach of statutory duty.</p>
 	<p>To the extent that the website and the information and services on the website are provided free of charge,
 	we will not be liable for any loss or damage of any nature.</p>
-<h2></h2>
-	<p></p>
+	<br/>
+  <br/>
 <h2>Credit & Contact Information</h2>
 	<p>This Terms and conditions page was created at <a
 		href="https://termsandconditionstemplate.com">termsandconditionstemplate.com</a> generator. If you have
 	any queries regarding any of our terms, please contact us.</p>
-            <img src={require('../photos/meme1.jpg')} alt="meme" width="50%" height="50%" />
+  <br />
         </div>
      </div>
   )
