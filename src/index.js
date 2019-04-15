@@ -11,7 +11,7 @@ import { reduxFirestore, getFirestore } from 'redux-firestore'; //connection bet
 import { reactReduxFirebase, getFirebase } from 'react-redux-firebase'; //connection between react-redux-firebase
 import fbConfig from './config/fbConfig'; //configuration of firebase
 
-//creation of a store
+//creation of a store Tom/Libor
 const store = createStore(rootReducer,
   compose(
     applyMiddleware(thunk.withExtraArgument({ getFirebase, getFirestore })),

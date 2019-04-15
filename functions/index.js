@@ -2,7 +2,7 @@ const functions = require('firebase-functions');
 const admin = require('firebase-admin');
 admin.initializeApp(functions.config().firebase);
 
-//Creation of a notification
+//Creation of a notification Tom/Libor
 const createNotification = (notification => {
   return admin.firestore().collection('notifications')
   .add(notification)

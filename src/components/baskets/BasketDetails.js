@@ -7,6 +7,7 @@ import { compose } from 'redux';
 import { Redirect } from 'react-router-dom'
 import moment from 'moment'
 
+// Basket Details form + function Libor
 const BasketDetails = (props) => {
   const { basket ,auth} = props;
     if (!auth.uid) return <Redirect to='/signin' />

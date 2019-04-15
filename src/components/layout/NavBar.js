@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import LoginLinks from './LoginLinks.js';
 import LogoutLinks from './LogoutLinks.js';
 import { connect } from 'react-redux';
-//Navigetion bar for everybody - Tom
+//Navigetion bar for everybody - Tom/Libor
 const NavBar = (props) =>{
   const { auth } = props;
   console.log(auth);

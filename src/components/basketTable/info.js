@@ -3,6 +3,7 @@ import { Card } from 'react-bootstrap'
 import moment from 'moment'
 import { connect } from 'react-redux'
 
+// Info - notifications mainscreen Libor 
 const Info = (props) => {
     const {notifications, auth} = props;
         return(

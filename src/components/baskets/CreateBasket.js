@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { createBasket } from '../../store/actions/basketsActions';
 import { Redirect } from 'react-router-dom'
 
+// Create basket form + function Libor
 class CreateBasket extends Component{
     state = {
       title: '',

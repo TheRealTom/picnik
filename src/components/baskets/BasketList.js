@@ -3,6 +3,7 @@ import BasketSummary from './BasketSummary'
 import { Link } from 'react-router-dom'
 import { connect } from 'react-redux'
 
+// Nest for baskets Libor
 const BasketList = (props) => {
   const {projects, auth} = props;
   return(

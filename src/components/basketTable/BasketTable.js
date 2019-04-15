@@ -7,6 +7,7 @@ import { compose } from 'redux'
 import { Redirect } from 'react-router-dom'
 import Info from './info'
 
+// Basket table grid + functions Libor
 class BasketTable extends Component {
   render(){
     //console.log(this.props);

@@ -2,6 +2,7 @@ import React from 'react'
 import { Card } from 'react-bootstrap'
 import moment from 'moment'
 
+// Basket Summary form Libor
 const BasketSummary = ({project}) => {
   return (
     <div style={{marginTop: "10px", marginBottom: "10px"}}>
