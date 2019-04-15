@@ -2,7 +2,7 @@ import React from 'react';
 import '../../App.css';
 
 import Notifications from '../adminNots/Notifications';
-import Newsletter from './adminNotifications/Newsletter';
+import NewsletterForm from './adminNotifications/NewsletterForm';
 import Charts from './adminNotifications/Charts';
 //layout for Admin - Tom
 const Admin = () =>{
@@ -11,7 +11,7 @@ const Admin = () =>{
         <div>
           <Notifications />
           <Charts />
-          <Newsletter />
+          <NewsletterForm />
         </div>
      </div>
   )

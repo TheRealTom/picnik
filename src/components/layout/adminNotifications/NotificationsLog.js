@@ -11,7 +11,7 @@ const NotificationsLog = (props) => {
       <div className="Admin-title">
         Logs:
       </div>
-      {notifications && notifications.map(item =>{
+      {notifications && notifications.slice(0,10).map(item =>{
         return <ListGroup>
                 <ListGroup.Item as='li' key={item.id}>
                   <span className="Admin-text">{item.content}</span><br />
