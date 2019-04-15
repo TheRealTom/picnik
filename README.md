@@ -43,6 +43,7 @@
     <li>homePage</li>
     <li>CSS</li>
     <li>Notifications for user</li>
+    <li>Statistics about the application</li>
 </ul>
 <h2>In progress:</h2>
 <ul>
