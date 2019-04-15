@@ -1,69 +1,68 @@
 # picnik
 <br>Use Case diagram: https://creately.com/diagram/jr1s6bz23/3727oflBfsBH324jxG26ksKHU%3D
 <br>MindMap: https://atlas.mindmup.com/2019/01/9db582c0249b11e9aa975b89a12fdd28/picnik_mindmap/index.html
-<br>Database:/url/
+<br>Firebase Database:https://console.firebase.google.com/u/1/project/picnic-mp123456789/database/firestore/data
 <br>Working students SŠ: T.S., L.N.
 <br>Front-end: React.js
 <br>Back-end: Firebase/Redux js
-<br>Database: NoSQL via Firebase
-<br>Hosting: Firebase: https://picnic-mp123456789.firebaseapp.com/ (it is just blank at the moment...)
-<br>CSS: Own/Bootstrap, React Spring
-<br><br>Workflow:
-<br>T.S.
-<ol
-    <li>Programme user management</li>
+<br>Hosting: Firebase: https://picnic-mp123456789.firebaseapp.com/
+<br>CSS: Own/React-Bootstrap
+<br><br>      
+<br>    
+<h2>Done:</h2>
+<h3>T.S.</h3>
+<ul>
+    <li>Delete, update, view profile</li>
+    <li>Firebase configuration</li>
+    <li>User Database</li>
+    <li>User management</li>
+    <li>mainPage</li>
+    <li>Reset password</li>
+    <li>Registration</li>
+    <li>Comments, docs, sketches, mindmap, UML diagrams</li>
+    <li>homePage</li>
+    <li>CSS</li>
+    <li>Configure GIThub for L.N.</li>
+    <li>Login</li>
+    <li>Reset password</li>
+    <li>Reset password via mail</li>
+    <li>Special nav for admins with statistics</li>
+    <li>Statistics about the application</li>
+    <li>Notifications for admin</li>
+</ul>
+<h3>L.N.</h3>
+<ul>
+    <li>Programme UI - Baskets</li>
             <ul>
-            <li>Friendlist</li>
-            <li>Special nav for admins with statistics(?)</li>
+                <li>Open, create, view</li>
             </ul>
-    <li>Something more, but I dont know what at the moment</li>
-</ol>
-<br>L.N.
+    <li>Comments, docs, sketches, mindmap, UML diagram</li>
+    <li>Firebase configuration</li>
+    <li>Baskets Database</li>
+    <li>mainPage</li>
+    <li>homePage</li>
+    <li>CSS</li>
+    <li>Notifications for user</li>
+</ul>
+<h2>In progress:</h2>
+<ul>
+    <li>Newsletter</li>
+</ul>
+<h2>Haven't started:</h2>
+<br><h3>L.N.</h3><br>
 <ol>
     <li>Programme UI - Items</li>
             <ul>
               <li>Delete, create, move, update, color, priority, comment, calendar(?) items</li>    
               <li>Add/ban users</li>
             </ul>
-    <li>Something more, but I dont know what at the moment</li>
-</ol>
-<br>For both
-<ol>
-    <li>Make DB preview</li>
-    <li>Ensure everybody does his work</li>
-    <li>Programme database</li>
-    <li>Programme mainPage which will be same for everybody</li>
-</ol>
-
-<h2>In Progress:<h2>
-<h3>Tom</h3>
-<ul>
-  <li>Delete, update, review profile</li>   
-  <li>Make docs, comments</li>
-  <li>Firebase configuration</li>
-  <li>User Database</li>
-  <li>CSS</li>
-  <li>Be Awesome and Creative</li>  
-</ul>
-<br>    
-<h3>L.N.</h3>
-<ul>
-  <li>Programme UI - Baskets</li>
+    <li>Programme UI - Baskets</li>
             <ul>
-                <li>Delete, open, create, view, color baskets</li>    
+                <li>Delete, color baskets</li>    
                 <li>Add/ban users</li>
             </ul>
-  <li>Baskets Database</li>
-  <li>mainPage</li>
-  <li>CSS/Bootstrap/Animations</li>
-  <li>Be Awesome and Creative</li>  
-</ul>
-<h2>Done:<h2>
-<ul>
-    <li>Reset password</li>
-    <li>Registration</li>
-    <li>Make mindmaps, diagrams</li>
-    <li>homePage</li>
-    <li>Configure GIThub for L.N.</li>
-    <li>Login</li>
-</ul>
+</ol>  
+<br><h3>Both</h3><br>
+<ol>
+    <li>Pays and credit system</li>
+</ol>  
